@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 22</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat tabel atau diagram lalu diminta menjelaskan apa yang terjadi berdasarkan data tersebut?</li>
+<li>Menurutmu, mengapa dua orang bisa menarik kesimpulan berbeda dari data yang sama?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menyimpulkan kebiasaan siswa berdasarkan data kehadiran di kelas.</li>
+<li>Menentukan hari paling ramai di kantin sekolah dari data penjualan.</li>
+<li>Membaca diagram cuaca untuk menyimpulkan perubahan suhu selama seminggu.</li>
+<li>Menarik kesimpulan dari hasil survei hobi atau minat siswa di kelas.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu membaca dan menginterpretasi data dari tabel dan berbagai jenis diagram (batang, garis, lingkaran) untuk menarik kesimpulan yang logis dan relevan.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati tabel dan diagram yang berisi data sederhana.</li>
+<li>Siswa berdiskusi kelompok untuk menemukan pola, perbandingan, atau tren dari data.</li>
+<li>Siswa menyampaikan kesimpulan berdasarkan data dengan bahasa sendiri.</li>
+<li>Siswa mengerjakan latihan menjawab pertanyaan dan menarik kesimpulan dari tabel atau diagram</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Apa itu Interpretasi Data?<br>
+Interpretasi data adalah proses memahami makna dari data yang disajikan, baik dalam bentuk tabel maupun diagram, untuk:<br>
+Menjawab pertanyaan<br>
+Menarik kesimpulan<br>
+Membuat keputusan<br><br>
+Langkah-langkah Interpretasi:<br>
+Identifikasi jenis data dan bentuk penyajiannya (tabel atau diagram).<br>
+Amati pola atau tren yang muncul.<br>
+Bandingkan kategori atau nilai yang ada.<br>
+Tarik kesimpulan berdasarkan pengamatan.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Interpretasi Tabel</strong><br>
+Tabel menunjukkan jumlah siswa yang mengikuti ekstrakurikuler:
+<table>
+<tr>
+<th>Ekstrakurikuler</th>
+<th>Jumlah Siswa</th>
+</tr>
+<tr>
+<td>Pramuka</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Basket</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Musik</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Bahasa Inggris</td>
+<td>5</td>
+</tr>
+</table>
+Pertanyaan:<br>
+Ekstrakurikuler apa yang paling diminati?<br>
+Berapa selisih antara jumlah siswa Pramuka dan Musik?<br>
+Jawaban:<br>
+Paling diminati: Pramuka<br>
+Selisih: 20 - 10 = 10 siswa<br><br>
+<strong>Contoh Soal 2: Interpretasi Diagram Garis</strong><br>
+Diagram garis menunjukkan jumlah pengunjung perpustakaan selama seminggu:
+<table>
+<tr>
+<th>Hari</th>
+<th>Jumlah Pengunjung</th>
+</tr>
+<tr>
+<td>Senin</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Selasa</td>
+<td>45</td>
+</tr>
+<tr>
+<td>Rabu</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Kamis</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Jumat</td>
+<td>35</td>
+</tr>
+</table>
+Pertanyaan:<br>
+Hari apa jumlah pengunjung tertinggi?<br>
+Apakah ada tren peningkatan atau penurunan?<br>
+Jawaban:<br>
+Tertinggi: Kamis<br>
+Tren: Meningkat dari Senin ke Kamis, lalu menurun di Jumat
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Interpretasikan data dari diagram lingkaran yang menunjukkan jenis transportasi yang digunakan siswa ke sekolah.</li>
+<li>Buat kesimpulan dari tabel frekuensi jumlah jam belajar siswa selama seminggu.</li>
+<li>Bandingkan dua diagram batang yang menunjukkan jumlah konsumsi buah dan sayur oleh siswa, lalu simpulkan mana yang lebih banyak dikonsumsi.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa manfaat dari kemampuan menginterpretasi data dalam kehidupan sehari-hari?</li>
+<li>Bagaimana kamu memastikan kesimpulan yang kamu buat berdasarkan data itu akurat?</li>
+<li>Minta siswa membuat satu kesimpulan dari data yang mereka kumpulkan sendiri, lalu diskusikan apakah kesimpulan tersebut didukung oleh data secara logis.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

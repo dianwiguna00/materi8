@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 20</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat dua grafik garis yang berpotongan di suatu titik?</li>
+<li>Menurutmu, apa arti titik perpotongan dua grafik dalam suatu masalah nyata?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan titik temu dua rute perjalanan yang digambarkan dengan grafik.</li>
+<li>Mencari harga dua barang dengan melihat perpotongan grafik total harga.</li>
+<li>Menentukan waktu saat dua kegiatan berbeda menghasilkan jumlah yang sama.</li>
+<li>Membandingkan dua pilihan paket layanan melalui grafik biaya.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyelesaikan sistem persamaan linear dua variabel dengan metode grafik dan menginterpretasikan titik potong sebagai solusi dari sistem.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati dua persamaan linear yang disajikan dalam bentuk grafik.</li>
+<li>Siswa berdiskusi berkelompok untuk menentukan titik-titik pada masing-masing grafik.</li>
+<li>Siswa menggambar grafik kedua persamaan dan menemukan titik potongnya.</li>
+<li>Siswa mengerjakan latihan soal serupa untuk menyimpulkan solusi SPLDV dari grafik.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu Metode Grafik?</strong><br>
+Metode grafik adalah cara menyelesaikan SPLDV dengan menggambarkan kedua persamaan pada bidang koordinat dan menentukan titik potongnya sebagai solusi.<br><br>
+<strong>Langkah-langkah:</strong><br>
+Ubah masing-masing persamaan ke bentuk eksplisit: y = mx + c.<br>
+Tentukan dua titik untuk masing-masing garis.<br>
+Gambar kedua garis pada bidang koordinat.<br>
+Titik potong kedua garis adalah solusi SPLDV.<br><br>
+<strong>Jenis Solusi Berdasarkan Grafik:</strong><br>
+Satu titik potong → satu solusi<br>
+Garis berimpit → tak hingga solusi<br>
+Garis sejajar → tidak ada solusi
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Selesaikan SPLDV berikut dengan metode grafik:<br>
+y = 2x + 1<br>
+y = -x + 4<br><br>
+<strong>Penyelesaian:</strong><br>
+Garis pertama: titik (0,1) dan (1,3)<br>
+Garis kedua: titik (0,4) dan (1,3)<br>
+Titik potong: (1,3)<br><br>
+<strong>Jawaban:</strong> (x, y) = (1, 3)<br><br>
+<strong>Contoh Soal 2:</strong><br>
+2x + y = 6<br>
+x - y = 1<br><br>
+<strong>Langkah:</strong><br>
+Ubah ke bentuk eksplisit:<br>
+y = 6 - 2x<br>
+y = x - 1<br>
+Tentukan titik-titik dan gambar grafik.<br>
+Titik potong adalah solusi SPLDV.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Selesaikan SPLDV berikut dengan metode grafik:<br>
+y = 3x - 2<br>
+y = -x + 6</li>
+<li>Buat grafik dari SPLDV berikut dan tentukan titik potongnya:<br>
+x + y = 5<br>
+x - y = 1</li>
+<li>Buat satu soal kontekstual (misalnya: harga barang, waktu kerja, dll), susun SPLDV, dan selesaikan dengan metode grafik.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa keuntungan menggunakan metode grafik dibanding metode lain?</li>
+<li>Bagaimana kamu memastikan akurasi saat menggambar grafik?</li>
+<li>Apakah kamu bisa menjelaskan solusi SPLDV dari grafik kepada temanmu?</li>
+<li>Siswa diminta membuat grafik dari SPLDV yang mereka susun sendiri, menentukan titik potong, dan menjelaskan makna solusi dalam konteks masalah.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

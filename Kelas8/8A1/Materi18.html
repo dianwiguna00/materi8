@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 18</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mencoba menyelesaikan dua informasi yang saling berkaitan dengan mengganti salah satu nilai ke nilai lainnya?</li>
+<li>Menurutmu, kapan cara mengganti suatu nilai dapat mempermudah penyelesaian masalah?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan harga satu barang dengan memasukkan harga barang lain yang sudah diketahui.</li>
+<li>Menghitung jumlah uang atau barang ketika salah satu nilainya sudah ditentukan.</li>
+<li>Menyelesaikan masalah belanja dengan satu hubungan harga yang sudah diketahui.</li>
+<li>Menentukan umur seseorang jika diketahui hubungan usia dengan orang lain.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyelesaikan sistem persamaan linear dua variabel menggunakan metode substitusi dan menginterpretasikan solusi dalam konteks masalah.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati contoh masalah kontekstual yang melibatkan dua variabel.</li>
+<li>Siswa berdiskusi berkelompok untuk memilih persamaan yang akan diubah bentuknya.</li>
+<li>Siswa menyubstitusikan salah satu variabel ke persamaan lain untuk menemukan solusi.</li>
+<li>Siswa mengerjakan latihan menyelesaikan masalah SPLDV dengan metode substitusi secara mandiri atau berkelompok.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu Metode Substitusi?</strong><br>
+Metode substitusi adalah cara menyelesaikan SPLDV dengan mengganti salah satu variabel dari satu persamaan ke dalam persamaan lainnya.<br><br>
+<strong>Langkah-langkah:</strong><br>
+Pilih salah satu persamaan dan ubah menjadi bentuk salah satu variabel (misalnya: x = ... atau y = ...).<br>
+Substitusikan bentuk tersebut ke persamaan lainnya.<br>
+Selesaikan persamaan satu variabel.<br>
+Substitusikan kembali untuk mencari variabel lainnya.<br>
+Tulis solusi sebagai pasangan (x, y).
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Selesaikan SPLDV berikut dengan metode substitusi:<br>
+x + y = 10<br>
+x - y = 4<br><br>
+<strong>Penyelesaian:</strong><br>
+1. Dari persamaan pertama: x = 10 - y<br>
+2. Substitusi ke persamaan kedua:<br>
+10 - y - y = 4 → 10 - 2y = 4 → 2y = 6 → y = 3<br>
+3. Substitusi ke x = 10 - y: x = 7<br><br>
+<strong>Jawaban:</strong> (x, y) = (7, 3)<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Selesaikan SPLDV berikut:<br>
+2x + y = 11<br>
+x = 3y<br><br>
+<strong>Penyelesaian:</strong><br>
+1. Substitusi x = 3y ke persamaan pertama:<br>
+2(3y) + y = 11 → 7y = 11 → y = 11/7<br>
+2. x = 3 × 11/7 = 33/7<br><br>
+<strong>Jawaban:</strong> (x, y) = (33/7, 11/7)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Selesaikan SPLDV berikut:<br>
+x + 2y = 12<br>
+x = y + 4</li>
+<li>Selesaikan SPLDV berikut:<br>
+3x - y = 7<br>
+y = 2x + 1</li>
+<li>Buat satu soal kontekstual (misalnya: harga barang, jumlah siswa, dll), susun SPLDV, dan selesaikan dengan metode substitusi.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa langkah yang paling mudah dan paling menantang dalam metode substitusi?</li>
+<li>Bagaimana metode substitusi membantu menyelesaikan masalah nyata?</li>
+<li>Apakah kamu bisa menjelaskan metode ini kepada temanmu?</li>
+<li>Siswa diminta membuat satu SPLDV dari situasi nyata, menyelesaikannya dengan metode substitusi, dan menjelaskan prosesnya secara tertulis atau lisan.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

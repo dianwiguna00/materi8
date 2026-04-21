@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 12</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu membungkus kado atau melapisi sebuah kotak dengan kertas? Bagian mana saja yang harus tertutup seluruhnya?</li>
+<li>Jika kamu ingin mengecat sebuah lemari atau kardus, mengapa perlu mengetahui luas seluruh permukaannya?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menghitung luas kertas kado untuk membungkus kotak berbentuk kubus atau balok.</li>
+<li>Menentukan luas permukaan kardus untuk mengetahui banyaknya stiker atau label yang dibutuhkan.</li>
+<li>Memperkirakan luas permukaan lemari atau kotak penyimpanan yang akan dicat.</li>
+<li>Menghitung bahan pelapis pada kotak makanan atau kemasan produk.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menghitung luas permukaan kubus dan balok menggunakan rumus yang sesuai serta memahami makna dari hasil perhitungan tersebut.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati model atau gambar kubus dan balok serta permukaan-permukaannya.</li>
+<li>Siswa berdiskusi berkelompok untuk mengidentifikasi jumlah dan bentuk sisi pada kubus dan balok.</li>
+<li>Siswa mencatat ukuran sisi yang diperlukan untuk menghitung luas permukaan.</li>
+<li>Siswa mengerjakan latihan menghitung luas permukaan kubus dan balok berdasarkan data yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Kubus</strong><br>
+Memiliki 6 sisi yang semuanya berbentuk persegi dan sama besar.<br>
+Rumus luas permukaan kubus:<br>
+L = 6s²<br>
+Di mana s adalah panjang sisi kubus.<br><br>
+<strong>Balok</strong><br>
+Memiliki 6 sisi berbentuk persegi panjang, pasangan sisi yang berhadapan sama besar.<br>
+Rumus luas permukaan balok:<br>
+L = 2(pl + pt + lt)<br>
+Di mana:<br>
+p = panjang<br>
+l = lebar<br>
+t = tinggi
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Luas Permukaan Kubus</strong><br>
+Sebuah kubus memiliki panjang sisi 8 cm. Hitung luas permukaannya.<br>
+Penyelesaian:<br>
+L = 6 × 8² = 6 × 64 = 384 cm²<br><br>
+<strong>Contoh Soal 2: Luas Permukaan Balok</strong><br>
+Sebuah balok memiliki panjang 10 cm, lebar 6 cm, dan tinggi 4 cm. Hitung luas permukaannya.<br>
+Penyelesaian:<br>
+L = 2(10×6 + 10×4 + 6×4) = 2(60 + 40 + 24) = 2 × 124 = 248 cm²
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Hitung luas permukaan kubus dengan panjang sisi 12 cm.</li>
+<li>Hitung luas permukaan balok dengan ukuran panjang 15 cm, lebar 10 cm, dan tinggi 5 cm.</li>
+<li>Sebuah balok memiliki luas permukaan 294 cm². Jika panjangnya 7 cm dan lebarnya 6 cm, tentukan tingginya.</li>
+<li>Jelaskan perbedaan antara rumus luas permukaan kubus dan balok.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Mengapa penting mengetahui luas permukaan suatu bangun ruang?</li>
+<li>- Dalam kehidupan nyata, kapan kamu perlu menghitung luas permukaan kubus atau balok?</li>
+<li>Minta siswa membuat model kubus atau balok dari kertas, mengukur sisi-sisinya, dan menghitung luas permukaannya secara langsung.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

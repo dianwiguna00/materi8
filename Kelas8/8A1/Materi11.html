@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 11</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat dua titik lokasi pada peta dan membayangkan garis yang menghubungkannya?</li>
+<li>Jika kamu tahu kemiringan suatu jalan dan satu titik yang dilaluinya, apakah kamu bisa menggambarkan jalannya?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Hubungan antara jarak tempuh dan waktu pada perjalanan dengan kecepatan tetap.</li>
+<li>Grafik biaya parkir yang bertambah secara tetap setiap jam.</li>
+<li>Jalur lurus pada peta yang menghubungkan dua lokasi tertentu.</li>
+<li>Pertumbuhan tinggi badan yang bertambah secara teratur dari tahun ke tahun.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyusun persamaan garis lurus jika diketahui dua titik atau satu titik dan gradien, serta mengaitkannya dengan konteks kehidupan nyata.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati contoh pasangan titik atau informasi kemiringan dari situasi sehari-hari.</li>
+<li>Siswa berdiskusi berkelompok untuk menentukan garis lurus yang dapat mewakili hubungan tersebut.</li>
+<li>Siswa menyusun bentuk hubungan dalam model garis lurus berdasarkan data yang tersedia.</li>
+<li>Siswa mengerjakan latihan untuk membentuk persamaan garis lurus dari dua titik atau satu titik dan gradien.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>1. Bentuk Umum Persamaan Garis Lurus:</strong><br>
+y = mx + c<br>
+- m = gradien (kemiringan garis)<br>
+- c = titik potong dengan sumbu-y<br><br>
+<strong>2. Menentukan Persamaan Garis dari Dua Titik:</strong><br>
+Diketahui dua titik: (x₁, y₁) dan (x₂, y₂)<br>
+Hitung gradien: m = (y₂ - y₁) / (x₂ - x₁)<br>
+Gunakan salah satu titik dan gradien ke dalam rumus: y - y₁ = m(x - x₁), lalu ubah ke bentuk y = mx + c<br><br>
+<strong>3. Menentukan Persamaan Garis dari Satu Titik dan Gradien:</strong><br>
+Diketahui titik (x₁, y₁) dan gradien m<br>
+Gunakan rumus: y - y₁ = m(x - x₁), lalu ubah ke bentuk umum.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Tentukan persamaan garis yang melalui titik A(2, 3) dan B(4, 7).<br><br>
+<strong>Penyelesaian:</strong><br>
+m = (7 - 3) / (4 - 2) = 4 / 2 = 2<br>
+Gunakan titik A(2, 3):<br>
+y - 3 = 2(x - 2) ⇒ y = 2x - 1<br>
+<strong>Jawaban:</strong> y = 2x - 1<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Tentukan persamaan garis yang melalui titik (1, 5) dengan gradien m = -3.<br><br>
+<strong>Penyelesaian:</strong><br>
+y - 5 = -3(x - 1) ⇒ y = -3x + 8<br>
+<strong>Jawaban:</strong> y = -3x + 8
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Tentukan persamaan garis yang melalui titik (0, 4) dan (2, 8).</li>
+<li>Tentukan persamaan garis yang melalui titik (3, -2) dan gradien 5.</li>
+<li>Tentukan persamaan garis yang melalui titik (1, 2) dan (4, 2).</li>
+<li>Buat satu soal kontekstual yang melibatkan dua titik, lalu selesaikan.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa langkah pertama yang kamu lakukan saat menyusun persamaan garis?</li>
+<li>Apa perbedaan antara menyusun persamaan dari dua titik dan dari satu titik dan gradien?</li>
+<li>Bagaimana kamu bisa menggunakan konsep ini dalam kehidupan nyata?</li>
+<li>Siswa diminta membuat satu contoh situasi nyata yang dapat dimodelkan dengan persamaan garis lurus, lalu menyusun persamaannya.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

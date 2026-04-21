@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 20</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat data dalam bentuk diagram batang, garis, atau lingkaran? Menurutmu, mengapa data perlu disajikan dalam bentuk gambar?</li>
+<li>Jika kamu ingin membandingkan data dari beberapa kategori atau melihat perubahan dari waktu ke waktu, diagram apa yang paling mudah dipahami?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menyajikan data jumlah siswa berdasarkan hobi dalam bentuk diagram batang.</li>
+<li>Menampilkan perubahan suhu harian atau cuaca selama seminggu dalam diagram garis.</li>
+<li>Menunjukkan persentase jenis makanan favorit siswa dalam diagram lingkaran.</li>
+<li>Menyajikan data kehadiran siswa dalam bentuk diagram untuk laporan kelas.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyajikan data dalam bentuk diagram batang, garis, dan lingkaran secara tepat dan menarik.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati contoh tabel data dan berbagai jenis diagram yang sesuai.</li>
+<li>Siswa berdiskusi kelompok untuk menentukan jenis diagram yang tepat untuk suatu data.</li>
+<li>Siswa mengubah data dari tabel menjadi diagram batang, garis, atau lingkaran.</li>
+<li>Siswa mengerjakan latihan membuat dan membaca diagram berdasarkan data yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Tujuan Penyajian Data dalam Diagram</strong><br>
+Mempermudah pembacaan dan interpretasi data<br>
+Menyampaikan informasi secara visual dan ringkas<br>
+Menunjukkan pola, tren, dan perbandingan<br><br>
+<strong>Jenis Diagram:</strong><br>
+Diagram Batang<br>
+Menampilkan data dalam bentuk batang vertikal atau horizontal. Cocok untuk membandingkan kategori.<br><br>
+Diagram Garis<br>
+Menampilkan data dalam bentuk titik-titik yang dihubungkan garis. Cocok untuk menunjukkan perubahan dari waktu ke waktu.<br><br>
+Diagram Lingkaran (Pie Chart)<br>
+Menampilkan data sebagai bagian dari keseluruhan (100%). Cocok untuk menunjukkan proporsi.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Diagram Batang</strong><br>
+Data jumlah siswa yang memiliki hewan peliharaan:
+<table>
+<tr>
+<th>Jenis Hewan</th>
+<th>Jumlah Siswa</th>
+</tr>
+<tr>
+<td>Kucing</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Anjing</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Ikan</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Burung</td>
+<td>4</td>
+</tr>
+</table>
+Tugas: Buat diagram batang vertikal berdasarkan data tersebut.<br><br>
+
+<strong>Contoh Soal 2: Diagram Garis</strong><br>
+Data suhu harian selama 5 hari:
+<table>
+<tr>
+<th>Hari</th>
+<th>Suhu (°C)</th>
+</tr>
+<tr>
+<td>Senin</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Selasa</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Rabu</td>
+<td>31</td>
+</tr>
+<tr>
+<td>Kamis</td>
+<td>33</td>
+</tr>
+<tr>
+<td>Jumat</td>
+<td>30</td>
+</tr>
+</table>
+Tugas: Buat diagram garis untuk menunjukkan perubahan suhu.<br><br>
+
+<strong>Contoh Soal 3: Diagram Lingkaran</strong><br>
+Data jenis minuman favorit dari 40 siswa:<br>
+Teh: 10 siswa<br>
+Kopi: 8 siswa<br>
+Jus: 12 siswa<br>
+Air mineral: 10 siswa<br>
+Tugas: Buat diagram lingkaran dan tentukan besar sudut untuk masing-masing kategori.<br>
+Penyelesaian:<br>
+Teh: (10/40) × 360° = 90°<br>
+Kopi: (8/40) × 360° = 72°<br>
+Jus: (12/40) × 360° = 108°<br>
+Air mineral: (10/40) × 360° = 90°
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Buat diagram batang dari data jumlah buku yang dibaca siswa dalam seminggu.</li>
+<li>Buat diagram garis dari data tinggi tanaman yang diukur setiap hari selama 7 hari.</li>
+<li>Buat diagram lingkaran dari data hobi siswa di kelasmu (gunakan persentase atau jumlah).</li>
+<li>Jelaskan kelebihan dan kekurangan masing-masing jenis diagram.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Diagram mana yang paling mudah kamu pahami? Mengapa?</li>
+<li>- Bagaimana diagram membantu menyampaikan informasi lebih jelas daripada tabel?</li>
+<li>Minta siswa memilih satu jenis diagram, membuatnya berdasarkan data yang mereka kumpulkan sendiri, lalu mempresentasikan hasilnya di depan kelas.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 21</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Jika kamu mendapatkan hasil perhitungan berupa pasangan (x, y), apakah hasil itu selalu bermakna dalam kehidupan nyata?</li>
+<li>Bagaimana cara memastikan jawaban matematika yang kamu peroleh masuk akal dengan situasi soal cerita?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan jumlah masing-masing barang dari hasil perhitungan harga.</li>
+<li>Menafsirkan jumlah siswa laki-laki dan perempuan dari data total kelas.</li>
+<li>Menentukan banyaknya tiket dewasa dan anak dari total penjualan.</li>
+<li>Memahami arti kecepatan dan waktu dari hasil perhitungan perjalanan.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menafsirkan solusi dari sistem persamaan linear dua variabel dalam konteks masalah nyata dan menjelaskan makna dari nilai variabel yang diperoleh.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati hasil solusi SPLDV yang diperoleh dari soal cerita.</li>
+<li>Siswa berdiskusi untuk mengaitkan nilai variabel dengan makna dalam konteks soal.</li>
+<li>Siswa menjelaskan makna pasangan solusi secara lisan atau tertulis.</li>
+<li>Siswa mengerjakan latihan menafsirkan solusi SPLDV dari berbagai situasi nyata.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu Penafsiran Solusi SPLDV?</strong><br>
+Solusi SPLDV berupa pasangan nilai (x, y) yang memenuhi kedua persamaan. Dalam konteks kehidupan nyata, solusi ini memiliki makna spesifik tergantung pada masalahnya, seperti:<br>
+Jumlah barang yang dibeli<br>
+Harga masing-masing produk<br>
+Waktu dan kecepatan<br>
+Jumlah siswa laki-laki dan perempuan<br><br>
+<strong>Contoh Konteks:</strong><br>
+Jika solusi SPLDV adalah (x, y) = (3, 5) dalam konteks:<br>
+x = jumlah apel, y = jumlah jeruk<br>
+→ Maka: 3 apel dan 5 jeruk
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Seorang siswa membeli 2 pensil dan 3 buku seharga Rp21.000.<br>
+Temannya membeli 4 pensil dan 1 buku seharga Rp19.000.<br>
+Tentukan harga sebuah pensil dan sebuah buku.<br><br>
+<strong>Langkah:</strong><br>
+Misal: x = harga pensil, y = harga buku<br>
+SPLDV:<br>
+2x + 3y = 21.000<br>
+4x + y = 19.000<br><br>
+Selesaikan → (x, y) = (3.000, 5.000)<br><br>
+<strong>Interpretasi:</strong><br>
+Harga pensil = Rp3.000, harga buku = Rp5.000<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Jumlah siswa di kelas adalah 36 orang.<br>
+Jumlah siswa laki-laki dua kali jumlah siswa perempuan.<br>
+Tentukan jumlah siswa laki-laki dan perempuan.<br><br>
+<strong>Langkah:</strong><br>
+Misal: x = siswa laki-laki, y = siswa perempuan<br>
+SPLDV:<br>
+x + y = 36<br>
+x = 2y<br><br>
+Selesaikan → y = 12, x = 24<br><br>
+<strong>Interpretasi:</strong><br>
+24 siswa laki-laki dan 12 siswa perempuan
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Seorang ibu membeli 5 kg beras dan 2 liter minyak seharga Rp80.000.<br>
+Temannya membeli 3 kg beras dan 4 liter minyak seharga Rp76.000.<br>
+a. Tentukan SPLDV<br>
+b. Selesaikan<br>
+c. Tafsirkan hasilnya</li>
+<li>Buat satu soal kontekstual sendiri yang melibatkan dua variabel, susun SPLDV, selesaikan, dan tafsirkan hasilnya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa arti dari solusi SPLDV dalam soal cerita yang kamu selesaikan?</li>
+<li>Bagaimana kamu memastikan bahwa solusi yang diperoleh masuk akal dalam konteks masalah?</li>
+<li>Apakah kamu bisa membuat dan menafsirkan SPLDV dari kehidupan sehari-hari?</li>
+<li>Siswa diminta membuat satu soal cerita dari kehidupan mereka sendiri, menyusun SPLDV, menyelesaikannya, dan menuliskan interpretasi dari solusi yang diperoleh.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

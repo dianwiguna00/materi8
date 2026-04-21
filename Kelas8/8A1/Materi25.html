@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 25</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat suatu masalah nyata yang melibatkan pola angka sekaligus hubungan antar dua variabel?</li>
+<li>Bagaimana caramu menggunakan beberapa konsep matematika sekaligus untuk menyelesaikan satu masalah sederhana?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati pola pertumbuhan tabungan mingguan dan menyajikannya sebagai fungsi.</li>
+<li>Menghubungkan pola jumlah barang yang dibeli dengan total harga dalam sebuah tabel atau grafik.</li>
+<li>Mengamati pola kenaikan jumlah penonton dan mengaitkannya dengan grafik fungsi.</li>
+<li>Menganalisis pola kegiatan harian yang berulang dan perubahan jumlahnya dari waktu ke waktu.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu mengintegrasikan pemahaman tentang pola bilangan dan fungsi ke dalam proyek mini berbasis masalah kontekstual, serta menyajikan hasilnya dalam bentuk visual atau presentasi sederhana.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati contoh masalah nyata yang melibatkan pola bilangan dan fungsi secara bersamaan.</li>
+<li>Siswa berdiskusi berkelompok untuk menentukan pola dan hubungan yang muncul pada masalah tersebut.</li>
+<li>Siswa merancang proyek mini sederhana yang memadukan pola bilangan dan fungsi.</li>
+<li>Siswa mengerjakan proyek dan mempresentasikan hasilnya secara singkat kepada kelompok lain.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Mengapa Perlu Proyek Mini?</strong><br>
+Proyek mini membantu siswa:<br>
+Mengaitkan konsep matematika dengan kehidupan nyata<br>
+Mengembangkan keterampilan berpikir kritis dan kreatif<br>
+Melatih kemampuan komunikasi dan kolaborasi<br><br>
+<strong>Konsep yang Diintegrasikan:</strong><br>
+Pola Bilangan: mengenali dan menyusun rumus suku ke-n<br>
+Fungsi: menyatakan hubungan antar variabel dalam bentuk aljabar, tabel, dan grafik
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Proyek 1: Menyusun Jadwal Belajar Efisien</strong><br>
+Masalah: Seorang siswa ingin meningkatkan waktu belajar mingguannya secara bertahap.<br>
+Minggu ke-1: 2 jam<br>
+Minggu ke-2: 4 jam<br>
+dst...<br><br>
+Tugas Siswa:<br>
+Identifikasi pola waktu belajar.<br>
+Tentukan rumus suku ke-n.<br>
+Sajikan dalam bentuk tabel dan grafik.<br>
+Buat prediksi waktu belajar pada minggu ke-10.<br>
+Sajikan hasil dalam bentuk poster atau slide.<br><br>
+<strong>Proyek 2: Simulasi Tabungan Siswa</strong><br>
+Masalah: Seorang siswa menabung Rp10.000 per minggu, dimulai dari Rp50.000.<br><br>
+Tugas Siswa:<br>
+Buat fungsi yang menyatakan jumlah tabungan terhadap minggu.<br>
+Sajikan dalam bentuk tabel dan grafik.<br>
+Hitung jumlah tabungan pada minggu ke-12.<br>
+Sajikan hasil dalam bentuk laporan mini atau infografis.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Pilih salah satu proyek berikut atau buat proyek sendiri:<br>
+Pola pertumbuhan tanaman (tinggi bertambah setiap minggu)<br>
+Biaya transportasi harian (fungsi linear dari jarak)<br>
+Jumlah pengunjung perpustakaan (data mingguan)<br>
+Jumlah langkah per hari (fungsi waktu terhadap langkah)</li>
+<li>Langkah Kerja:<br>
+Identifikasi variabel dan pola<br>
+Susun rumus atau fungsi<br>
+Sajikan dalam tabel dan grafik<br>
+Buat kesimpulan dan presentasi</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa tantangan yang kamu hadapi saat mengerjakan proyek ini?</li>
+<li>Bagaimana pola bilangan dan fungsi membantumu memahami situasi nyata?</li>
+<li>Apa yang kamu pelajari dari proyek ini yang bisa kamu terapkan di luar kelas?</li>
+<li>Siswa menuliskan ringkasan proyek mereka dalam 5–7 kalimat yang menjelaskan masalah yang diangkat, konsep matematika yang digunakan, hasil dan kesimpulan, serta manfaat yang dirasakan.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

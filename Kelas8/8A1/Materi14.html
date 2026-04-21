@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 14</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat grafik lalu bertanya-tanya di mana grafik tersebut memotong sumbu x atau sumbu y?</li>
+<li>Jika suatu garis memotong sumbu, menurutmu apa arti titik potong tersebut dalam kehidupan sehari-hari?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Grafik biaya parkir yang menunjukkan biaya awal saat masuk area parkir.</li>
+<li>Grafik tabungan yang menunjukkan jumlah uang awal sebelum menabung.</li>
+<li>Grafik suhu udara yang menunjukkan suhu awal pada waktu tertentu.</li>
+<li>Grafik jarak tempuh yang menunjukkan titik mulai perjalanan.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menentukan titik potong garis lurus dengan sumbu x dan sumbu y dari persamaan garis, serta menginterpretasikan maknanya dalam konteks grafik dan kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa grafik garis lurus yang ditampilkan guru.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menemukan titik potong grafik dengan sumbu x dan sumbu y.</li>
+<li>Siswa menuliskan hasil pengamatan titik potong dari grafik yang diamati.</li>
+<li>Siswa mengerjakan latihan menentukan titik potong garis dari grafik atau persamaan sederhana.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>1. Titik Potong dengan Sumbu-Y (y-intercept):</strong><br>
+Titik saat x = 0 → Substitusi x = 0 ke dalam persamaan garis untuk mendapatkan nilai y.<br><br>
+<strong>2. Titik Potong dengan Sumbu-X (x-intercept):</strong><br>
+Titik saat y = 0 → Substitusi y = 0 ke dalam persamaan garis untuk mendapatkan nilai x.<br><br>
+<strong>Contoh Persamaan:</strong><br>
+y = 2x - 4<br>
+- Titik potong dengan sumbu-y: x = 0 ⇒ y = -4 → titik (0, -4)<br>
+- Titik potong dengan sumbu-x: 0 = 2x - 4 ⇒ x = 2 → titik (2, 0)
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Tentukan titik potong dengan sumbu-x dan sumbu-y dari persamaan y = -3x + 6<br><br>
+<strong>Penyelesaian:</strong><br>
+- Titik potong dengan sumbu-y: x = 0 ⇒ y = 6 → titik (0, 6)<br>
+- Titik potong dengan sumbu-x: 0 = -3x + 6 ⇒ x = 2 → titik (2, 0)<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Tentukan titik potong dengan sumbu-x dan sumbu-y dari persamaan y = ½x - 5<br><br>
+<strong>Penyelesaian:</strong><br>
+- Titik potong dengan sumbu-y: x = 0 ⇒ y = -5 → titik (0, -5)<br>
+- Titik potong dengan sumbu-x: 0 = ½x - 5 ⇒ x = 10 → titik (10, 0)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Tentukan titik potong dengan sumbu-x dan sumbu-y dari:<br>
+y = x + 3</li>
+<li>Tentukan titik potong dengan sumbu-x dan sumbu-y dari:<br>
+y = -2x + 8</li>
+<li>Tentukan titik potong dengan sumbu-x dan sumbu-y dari:<br>
+y = 4x - 12</li>
+<li>Buat grafik dari salah satu persamaan di atas dan tandai titik potongnya.</li>
+<li>Buat satu soal kontekstual (misalnya: biaya tetap dan biaya tambahan per unit), lalu tentukan titik potongnya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa arti titik potong dengan sumbu-x dan sumbu-y dalam grafik?</li>
+<li>Bagaimana kamu menentukan titik potong dengan cepat?</li>
+<li>Dalam kehidupan nyata, kapan kamu bisa menggunakan titik potong untuk menganalisis data?</li>
+<li>Siswa diminta membuat satu grafik garis lurus dari persamaan yang mereka buat sendiri, lalu menentukan dan menandai titik potong dengan sumbu-x dan sumbu-y serta menjelaskan maknanya.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

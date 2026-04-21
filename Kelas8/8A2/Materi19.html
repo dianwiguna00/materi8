@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 19</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu diminta mencatat sesuatu di sekitar rumah atau sekolah, seperti jumlah benda atau jenis barang tertentu? Untuk apa data itu dikumpulkan?</li>
+<li>Menurutmu, mengapa data perlu dicatat dengan rapi agar mudah dibaca dan dipahami?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengumpulkan data jumlah buku yang dibawa teman sekelas.</li>
+<li>Mencatat warna tas atau sepatu yang digunakan siswa di kelas.</li>
+<li>Menghitung jumlah kendaraan yang lewat di depan sekolah dalam waktu tertentu.</li>
+<li>Mencatat jenis makanan favorit teman sebangku.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu mengumpulkan data dari lingkungan sekitar secara sistematis dan menyajikannya dalam bentuk tabel frekuensi.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati contoh data sederhana yang berasal dari lingkungan sekitar.</li>
+<li>Siswa berdiskusi kelompok untuk menentukan cara mengelompokkan data yang diperoleh.</li>
+<li>Siswa menyajikan data hasil pengamatan ke dalam tabel sederhana.</li>
+<li>Siswa mengerjakan latihan membuat tabel frekuensi dari data yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu Data?</strong><br>
+Data adalah kumpulan fakta atau informasi yang diperoleh dari pengamatan, survei, atau eksperimen.<br><br>
+<strong>Jenis Data:</strong><br>
+Data Kualitatif: berupa kategori atau sifat (contoh: warna favorit, jenis makanan).<br>
+Data Kuantitatif: berupa angka (contoh: tinggi badan, jumlah buku).<br><br>
+<strong>Cara Mengumpulkan Data:</strong><br>
+Observasi langsung<br>
+Wawancara<br>
+Kuesioner/survei<br>
+Pengukuran<br><br>
+<strong>Tabel Data:</strong><br>
+Tabel digunakan untuk menyajikan data secara terstruktur dan mudah dibaca. Tabel frekuensi menunjukkan berapa kali suatu nilai muncul.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Mengumpulkan dan Menyajikan Data</strong><br>
+Siswa diminta mencatat jumlah buku yang dibawa oleh 10 teman sekelas. Data yang diperoleh:<br>
+3, 4, 2, 3, 5, 4, 3, 2, 4, 5<br><br>
+<strong>Contoh Soal 2: Data Kualitatif</strong><br>
+Siswa mencatat warna tas teman-temannya: merah, biru, hitam, merah, biru, biru, hitam, merah.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Lakukan survei kecil di kelas: catat jumlah saudara kandung dari 10 temanmu. Sajikan dalam tabel frekuensi.</li>
+<li>Catat jenis buah favorit dari 15 temanmu. Sajikan dalam tabel.</li>
+<li>Jelaskan perbedaan antara data kualitatif dan kuantitatif berdasarkan contohmu sendiri.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Apa tantangan yang kamu hadapi saat mengumpulkan data?</li>
+<li>- Mengapa penting menyajikan data dalam bentuk tabel?</li>
+<li>Minta siswa menuliskan satu hal menarik yang mereka temukan dari data yang dikumpulkan hari ini, lalu bagikan kepada teman sebangku.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

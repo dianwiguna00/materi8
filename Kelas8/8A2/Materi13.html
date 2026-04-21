@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 13</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mengisi air ke dalam akuarium atau kotak penyimpanan? Apa arti “isi” atau “kapasitas” dari benda tersebut?</li>
+<li>Jika dua kotak memiliki bentuk yang sama tetapi ukuran berbeda, menurutmu faktor apa yang memengaruhi banyaknya isi di dalamnya?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menghitung volume kotak penyimpanan untuk mengetahui banyak barang yang bisa dimasukkan.</li>
+<li>Menentukan kapasitas air dalam akuarium atau wadah minum berbentuk balok.</li>
+<li>Menghitung volume kardus untuk keperluan pengemasan barang.</li>
+<li>Memperkirakan isi kotak makanan atau wadah penyimpanan di rumah.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menghitung volume kubus dan balok menggunakan rumus yang sesuai serta memahami makna dari hasil perhitungan tersebut dalam konteks nyata.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati model atau gambar kubus dan balok dengan ukuran berbeda.</li>
+<li>Siswa berdiskusi berkelompok untuk mengidentifikasi ukuran yang memengaruhi volume.</li>
+<li>Siswa menuliskan informasi ukuran dari bangun yang diamati secara sederhana.</li>
+<li>Siswa mengerjakan latihan menghitung volume kubus dan balok berdasarkan data yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Volume Kubus</strong><br>
+Kubus memiliki 6 sisi berbentuk persegi dan semua sisinya sama panjang.<br>
+Rumus volume kubus:<br>
+V = s^3<br>
+Di mana s adalah panjang sisi kubus.<br><br>
+<strong>Volume Balok</strong><br>
+Balok memiliki panjang, lebar, dan tinggi yang bisa berbeda.<br>
+Rumus volume balok:<br>
+V = p × l × t<br>
+Di mana:<br>
+p = panjang<br>
+l = lebar<br>
+t = tinggi<br><br>
+<strong>Satuan Volume</strong><br>
+Volume diukur dalam satuan kubik: cm³, m³, dll.<br>
+1 dm³ = 1 liter
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Volume Kubus</strong><br>
+Sebuah kubus memiliki panjang sisi 9 cm. Hitung volumenya.<br>
+Penyelesaian:<br>
+V = 9^3 = 729 cm³<br><br>
+<strong>Contoh Soal 2: Volume Balok</strong><br>
+Sebuah balok memiliki panjang 12 cm, lebar 8 cm, dan tinggi 5 cm. Hitung volumenya.<br>
+Penyelesaian:<br>
+V = 12 × 8 × 5 = 480 cm³
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Hitung volume kubus dengan panjang sisi 11 cm.</li>
+<li>Hitung volume balok dengan ukuran panjang 15 cm, lebar 10 cm, dan tinggi 6 cm.</li>
+<li>Sebuah akuarium berbentuk balok memiliki volume 2.400 cm³ dan ukuran panjang 20 cm serta lebar 10 cm. Hitung tinggi akuarium tersebut.</li>
+<li>Jelaskan perbedaan makna antara luas permukaan dan volume dalam konteks benda nyata.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Dalam kehidupan sehari-hari, kapan kamu perlu menghitung volume suatu benda?</li>
+<li>- Apa perbedaan antara menghitung volume dan menghitung luas permukaan?</li>
+<li>Minta siswa membawa kotak kosong dari rumah (misalnya kotak sepatu atau kardus kecil), lalu mengukur dimensi dan menghitung volumenya. Diskusikan hasilnya dalam kelompok kecil.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 1</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat sudut siku-siku pada lantai kelas, ubin rumah, atau buku tulismu? Bentuk apa yang terbentuk jika tiga sisi itu disatukan?</li>
+<li>Saat membuat tangga kecil atau penyangga benda, mengapa sering digunakan bentuk segitiga yang salah satu sudutnya siku-siku?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Bentuk segitiga pada penyangga jemuran atau rangka atap rumah.</li>
+<li>Sudut siku-siku pada pertemuan lantai dan dinding yang membentuk segitiga jika diberi garis miring.</li>
+<li>Rambu lalu lintas atau papan peringatan yang berbentuk segitiga dengan sudut tertentu.</li>
+<li>Permainan engklek atau lapangan olahraga yang memiliki garis membentuk sudut siku-siku.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menjelaskan konsep segitiga siku-siku dan komponen-komponennya.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar benda di sekitar kelas yang membentuk sudut siku-siku dan segitiga.</li>
+<li>Siswa berdiskusi berpasangan untuk mengidentifikasi bagian-bagian segitiga siku-siku pada gambar.</li>
+<li>Siswa menggambar satu segitiga siku-siku sederhana dan memberi tanda pada setiap sisinya.</li>
+<li>Siswa mengerjakan latihan singkat untuk menentukan sisi miring dan kaki segitiga pada gambar yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu Segitiga Siku-Siku?</strong><br>
+Segitiga siku-siku adalah segitiga yang memiliki satu sudut sebesar 90° (sudut siku-siku).<br><br>
+<strong>Komponen Segitiga Siku-Siku:</strong><br>
+Sisi miring (hipotenusa): sisi yang berhadapan langsung dengan sudut siku-siku, dan merupakan sisi terpanjang.<br>
+Kaki segitiga: dua sisi lainnya yang membentuk sudut siku-siku.<br><br>
+<strong>Notasi Umum:</strong><br>
+Jika segitiga siku-siku memiliki sisi-sisi:<br>
+a dan b sebagai kaki segitiga<br>
+c sebagai sisi miring (hipotenusa)
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Identifikasi Komponen</strong><br>
+Perhatikan segitiga berikut:<br>
+Sisi AB = 6 cm<br>
+Sisi BC = 8 cm<br>
+Sudut B = 90°<br>
+Pertanyaan:<br>
+Sisi manakah yang merupakan sisi miring?<br>
+Sebutkan kaki-kaki segitiga tersebut.<br>
+Jawaban:<br>
+Sisi miring adalah AC (karena berhadapan dengan sudut siku-siku).<br>
+Kaki-kaki segitiga adalah AB dan BC.<br><br>
+<strong>Contoh Soal 2: Gambar dan Label</strong><br>
+Gambarlah segitiga siku-siku dengan panjang kaki 5 cm dan 12 cm.<br>
+Labeli sisi-sisinya dan tentukan sisi miringnya.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Tentukan sisi miring dari segitiga berikut:<br>
+Sisi PQ = 9 cm<br>
+Sisi QR = 12 cm<br>
+Sudut Q = 90°</li>
+<li>Gambarlah segitiga siku-siku dengan panjang kaki 7 cm dan 24 cm.</li>
+<li>Labeli sisi-sisinya.</li>
+<li>Identifikasi sisi miringnya.</li>
+<li>Jelaskan dengan kata-kata sendiri apa yang dimaksud dengan segitiga siku-siku dan bagaimana cara mengenali sisi miringnya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa yang membedakan segitiga siku-siku dengan segitiga lainnya?</li>
+<li>Mengapa penting mengetahui sisi miring dalam segitiga siku-siku?</li>
+<li>Bagaimana pemahaman ini akan membantu kita dalam mempelajari Teorema Pythagoras?</li>
+<li>Mintalah siswa menuliskan satu hal baru yang mereka pelajari hari ini dan satu pertanyaan yang masih mereka miliki tentang segitiga siku-siku.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

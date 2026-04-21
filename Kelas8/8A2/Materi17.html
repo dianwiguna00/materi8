@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 17</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menghitung banyaknya cat atau kertas pembungkus yang dibutuhkan untuk melapisi sebuah kotak atau bangunan kecil?</li>
+<li>Dalam kehidupan sehari-hari, kapan kamu perlu menghitung isi dan permukaan suatu benda sekaligus?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menghitung volume wadah untuk mengetahui kapasitas penyimpanan barang.</li>
+<li>Menentukan luas permukaan kotak untuk memperkirakan kebutuhan kertas pembungkus atau cat.</li>
+<li>Membandingkan efisiensi bentuk kemasan dalam menyimpan barang.</li>
+<li>Menghitung kebutuhan bahan dalam pembuatan benda berbentuk bangun ruang sederhana.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyelesaikan masalah kontekstual yang melibatkan perhitungan luas permukaan dan volume bangun ruang sisi datar seperti kubus, balok, prisma, dan limas.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa soal cerita yang berkaitan dengan bangun ruang sisi datar.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menentukan apakah situasi memerlukan perhitungan volume atau luas permukaan.</li>
+<li>Siswa menuliskan model bangun ruang dan informasi ukuran dari masalah yang diberikan.</li>
+<li>Siswa mengerjakan latihan soal kontekstual dan menjelaskan strategi penyelesaiannya secara lisan atau tertulis.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Masalah kontekstual mengajak siswa menerapkan rumus-rumus bangun ruang dalam situasi nyata, seperti:<br>
+Menghitung volume wadah untuk mengetahui kapasitas.<br>
+Menentukan luas permukaan untuk keperluan pengecatan, pelapisan, atau pembungkusan.<br>
+Membandingkan efisiensi bentuk dalam desain dan konstruksi.<br><br>
+<strong>Rumus-Rumus Penting:</strong><br>
+Kubus: Volume = s³, Luas permukaan = 6s²<br>
+Balok: Volume = p × l × t, Luas permukaan = 2(pl + pt + lt)<br>
+Prisma: Volume = Luas alas × tinggi, Luas permukaan = 2 × Luas alas + jumlah luas sisi tegak<br>
+Limas: Volume = (1/3) × Luas alas × tinggi, Luas permukaan = Luas alas + jumlah luas sisi tegak
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Kotak Kardus</strong><br>
+Sebuah kotak kardus berbentuk balok memiliki panjang 40 cm, lebar 30 cm, dan tinggi 20 cm.<br>
+Pertanyaan:<br>
+a. Berapa volume kotak tersebut?<br>
+b. Jika seluruh permukaan akan dilapisi kertas, berapa luas kertas yang dibutuhkan?<br>
+Penyelesaian:<br>
+a. V = 40 × 30 × 20 = 24.000 cm³<br>
+b. L = 2(40 × 30 + 40 × 20 + 30 × 20) = 2(1200 + 800 + 600) = 2 × 2600 = 5200 cm²<br><br>
+<strong>Contoh Soal 2: Tangki Air Berbentuk Prisma Segitiga</strong><br>
+Tangki air berbentuk prisma segitiga memiliki alas segitiga dengan panjang alas 60 cm dan tinggi segitiga 40 cm. Tinggi tangki (prisma) adalah 100 cm.<br>
+Pertanyaan:<br>
+Berapa liter air yang dapat ditampung tangki tersebut?<br>
+Penyelesaian:<br>
+Luas alas = (1/2) × 60 × 40 = 1200 cm²<br>
+Volume = 1200 × 100 = 120.000 cm³ = 120 liter
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah limas segiempat memiliki alas 10 cm × 10 cm dan tinggi 15 cm. Hitung volumenya.</li>
+<li>Sebuah prisma segitiga memiliki alas segitiga dengan panjang alas 12 cm dan tinggi 8 cm. Tinggi prisma 20 cm. Hitung volume dan luas permukaannya jika sisi tegak masing-masing 13 cm, 12 cm, dan 11 cm.</li>
+<li>Buatlah soal cerita yang melibatkan perhitungan volume dan luas permukaan bangun ruang sisi datar, lalu selesaikan.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Dalam kehidupan nyata, kapan kamu perlu menghitung volume atau luas permukaan suatu benda?</li>
+<li>- Apa yang kamu pelajari dari menyelesaikan soal cerita dibandingkan soal hitungan biasa?</li>
+<li>Minta siswa membuat mini proyek: pilih satu benda nyata (misalnya kotak, tangki, kemasan), ukur dimensinya, dan hitung volume serta luas permukaannya. Presentasikan hasilnya di depan kelas.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

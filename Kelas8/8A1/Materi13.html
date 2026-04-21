@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 13</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat persamaan matematika lalu membayangkan bentuk grafiknya?</li>
+<li>Menurutmu, bagaimana cara menggambar grafik garis lurus hanya dari sebuah persamaan?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Grafik biaya parkir yang menunjukkan hubungan antara lama parkir dan total biaya.</li>
+<li>Grafik jarak tempuh kendaraan terhadap waktu perjalanan.</li>
+<li>Grafik pertumbuhan tinggi badan siswa dari usia ke usia.</li>
+<li>Grafik jumlah tabungan terhadap lama waktu menabung.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyajikan persamaan garis lurus dalam bentuk grafik di bidang koordinat kartesius dan menginterpretasikan bentuk grafik tersebut.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa persamaan garis lurus yang disajikan guru.</li>
+<li>Siswa berdiskusi berpasangan untuk menentukan pasangan titik dari setiap persamaan.</li>
+<li>Siswa menggambar grafik garis lurus berdasarkan pasangan titik yang diperoleh.</li>
+<li>Siswa mengerjakan latihan menggambar dan membaca grafik dari persamaan garis lurus.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>1. Grafik Garis Lurus</strong><br>
+Grafik dari persamaan garis lurus berbentuk garis yang memotong sumbu-x dan sumbu-y. Bentuk umum persamaan:<br>
+y = mx + c<br>
+- m = gradien (kemiringan garis)<br>
+- c = titik potong dengan sumbu-y<br><br>
+<strong>2. Langkah Menyajikan Grafik:</strong><br>
+1. Tentukan dua titik dari persamaan (misalnya dengan memilih dua nilai x dan menghitung y).<br>
+2. Plot titik-titik tersebut di bidang koordinat.<br>
+3. Hubungkan titik-titik dengan garis lurus.<br><br>
+<strong>Contoh:</strong><br>
+Persamaan: y = 2x + 1<br>
+- Jika x = 0 ⇒ y = 1 → titik (0,1)<br>
+- Jika x = 2 ⇒ y = 5 → titik (2,5)<br>
+- Hubungkan titik (0,1) dan (2,5) → garis lurus
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Gambarkan grafik dari persamaan y = -x + 3<br><br>
+<strong>Penyelesaian:</strong><br>
+- Pilih dua nilai x:<br>
+x = 0 ⇒ y = 3 → titik (0,3)<br>
+x = 2 ⇒ y = 1 → titik (2,1)<br>
+- Plot titik (0,3) dan (2,1), lalu hubungkan dengan garis lurus.<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Gambarkan grafik dari y = ½x - 2<br><br>
+<strong>Penyelesaian:</strong><br>
+- x = 0 ⇒ y = -2 → titik (0, -2)<br>
+- x = 4 ⇒ y = 0 → titik (4, 0)<br>
+- Plot titik (0, -2) dan (4, 0), lalu hubungkan.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>y = 3x + 2</li>
+<li>y = -2x + 4</li>
+<li>y = x - 1</li>
+<li>Tentukan dua titik dari masing-masing persamaan dan gambarkan grafiknya.</li>
+<li>Buat satu soal kontekstual (misalnya: biaya parkir per jam, jarak tempuh kendaraan) dan sajikan grafiknya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa yang kamu perhatikan dari bentuk grafik garis lurus?</li>
+<li>Bagaimana gradien memengaruhi arah grafik?</li>
+<li>Apakah kamu bisa membuat grafik dari persamaan yang kamu buat sendiri?</li>
+<li>Siswa diminta membuat satu persamaan garis lurus dari situasi nyata, menentukan dua titik, dan menggambarkan grafiknya di kertas atau aplikasi digital.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

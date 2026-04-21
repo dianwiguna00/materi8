@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 10</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu membagi pizza atau kue ulang tahun menjadi beberapa bagian yang sama? Bagian berbentuk apa yang kamu dapatkan?</li>
+<li>Jika sebuah lingkaran dibagi menjadi beberapa irisan dengan ukuran berbeda, apa yang menentukan besar kecilnya tiap irisan?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Potongan pizza atau kue tart yang dibagi berdasarkan besar sudut tertentu.</li>
+<li>Lampu taman atau kipas angin yang memiliki bentuk bagian lingkaran.</li>
+<li>Jam dinding yang menunjukkan bagian waktu dalam irisan lingkaran.</li>
+<li>Desain logo atau rambu yang memanfaatkan bagian lingkaran tertentu.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu memahami konsep juring dan sektor lingkaran serta menghitung luasnya menggunakan rumus yang sesuai.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar lingkaran yang dibagi menjadi beberapa juring dengan sudut berbeda.</li>
+<li>Siswa berdiskusi kelompok untuk membandingkan besar sudut pusat dan luas bagian lingkaran.</li>
+<li>Siswa menggambar lingkaran dan membaginya menjadi beberapa juring sesuai sudut yang ditentukan.</li>
+<li>Siswa mengerjakan latihan menentukan luas juring berdasarkan informasi yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Apa itu Juring?<br>
+Juring adalah bagian dari lingkaran yang dibatasi oleh dua jari-jari dan busur lingkaran. Bentuknya menyerupai irisan kue atau pizza.<br><br>
+Hubungan dengan Luas Lingkaran<br>
+Luas juring merupakan sebagian dari luas lingkaran, tergantung pada besar sudut pusatnya.<br><br>
+Rumus Luas Juring:<br>
+Jika sudut pusat juring adalah θ derajat dan jari-jari lingkaran adalah r, maka:<br>
+L = (θ/360°) × π × r²
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Luas Juring dengan Sudut 90°</strong><br>
+Hitung luas juring dari lingkaran berjari-jari 14 cm dengan sudut pusat 90°. Gunakan π = 22/7.<br>
+L = (90/360) × (22/7) × 14²<br>
+= (1/4) × (22/7) × 196<br>
+= (1/4) × 616<br>
+= 154 cm²<br><br>
+<strong>Contoh Soal 2: Luas Juring dengan Sudut 60°</strong><br>
+Hitung luas juring dari lingkaran berjari-jari 21 cm dengan sudut pusat 60°. Gunakan π = 22/7.<br>
+L = (60/360) × (22/7) × 21²<br>
+= (1/6) × (22/7) × 441<br>
+= (1/6) × 1386<br>
+= 231 cm²
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Hitung luas juring dari lingkaran dengan jari-jari 7 cm dan sudut pusat 120° (gunakan π = 22/7).</li>
+<li>Sebuah juring memiliki jari-jari 10 cm dan sudut pusat 45°. Hitung luasnya (gunakan π = 3,14).</li>
+<li>Jelaskan bagaimana perubahan sudut pusat memengaruhi luas juring.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Apa hubungan antara sudut pusat dan luas juring?</li>
+<li>- Dalam kehidupan nyata, di mana kamu bisa menemukan bentuk juring?</li>
+<li>Minta siswa menggambar lingkaran dan membagi menjadi beberapa juring dengan sudut berbeda, lalu menghitung luas masing-masing dan membandingkan hasilnya.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

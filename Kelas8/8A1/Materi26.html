@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 26</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menyelesaikan masalah nyata yang membutuhkan lebih dari satu langkah perhitungan?</li>
+<li>Bagaimana caramu bekerja sama dengan teman untuk memahami soal yang terasa kompleks?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menyelesaikan masalah belanja yang melibatkan beberapa jenis barang dan informasi harga.</li>
+<li>Menganalisis data sederhana dari kehidupan sehari-hari seperti tabungan, jarak, atau waktu.</li>
+<li>Menghubungkan informasi dalam tabel, grafik, dan persamaan untuk menarik kesimpulan.</li>
+<li>Menyelesaikan studi kasus sederhana yang sering dijumpai di lingkungan sekitar.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyusun laporan sederhana tentang penerapan SPLDV dalam kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati satu masalah kontekstual terpadu yang disajikan guru.</li>
+<li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi informasi penting dalam masalah.</li>
+<li>Siswa menyelesaikan masalah secara bertahap dengan strategi yang disepakati bersama.</li>
+<li>Siswa mempresentasikan hasil penyelesaian dan menanggapi solusi dari kelompok lain.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Sistem Persamaan Linear Dua Variabel (SPLDV) digunakan untuk menyelesaikan masalah yang melibatkan dua kondisi atau dua variabel.<br>
+Contoh penerapannya:<br>
+Menentukan harga dua jenis barang.<br>
+Menghitung jumlah dan harga tiket.<br>
+Menyelesaikan masalah keuangan sederhana.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Soal:</strong><br>
+Seorang pedagang menjual dua jenis buah: apel dan jeruk.<br>
+Pada hari pertama, ia menjual 3 kg apel dan 2 kg jeruk seharga Rp80.000.<br>
+Pada hari kedua, ia menjual 2 kg apel dan 4 kg jeruk seharga Rp100.000.<br>
+Berapa harga per kg apel dan jeruk?<br><br>
+<strong>Penyelesaian:</strong><br>
+Misalkan:<br>
+x = harga per kg apel<br>
+y = harga per kg jeruk<br>
+Persamaan 1: 3x + 2y = 80.000<br>
+Persamaan 2: 2x + 4y = 100.000<br>
+Gunakan metode eliminasi atau substitusi untuk menyelesaikan.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah bioskop menjual tiket dewasa dan anak-anak.<br>
+Pada hari Senin, 5 tiket dewasa dan 3 tiket anak-anak menghasilkan Rp215.000.<br>
+Pada hari Selasa, 3 tiket dewasa dan 4 tiket anak-anak menghasilkan Rp195.000.<br>
+Tentukan harga tiket dewasa dan anak-anak.</li>
+<li>Sebuah toko menjual paket alat tulis.<br>
+Paket A berisi 2 buku dan 3 pensil seharga Rp27.000.<br>
+Paket B berisi 3 buku dan 2 pensil seharga Rp31.000.<br>
+Tentukan harga sebuah buku dan sebuah pensil.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa manfaat SPLDV dalam kehidupan sehari-hari?</li>
+<li>Bagaimana strategi Anda dalam menyusun persamaan dari masalah kontekstual?</li>
+<li>Apa tantangan yang Anda hadapi saat menyelesaikan SPLDV?</li>
+<li>Bagaimana Anda bisa menggunakan SPLDV untuk membuat keputusan dalam kehidupan nyata?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

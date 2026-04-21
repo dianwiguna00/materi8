@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 9</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menghitung luas atau keliling suatu benda berbentuk lingkaran di sekitar rumah? Dalam situasi apa saja hal itu dibutuhkan?</li>
+<li>Jika kamu ingin memasang pagar atau menghias benda berbentuk lingkaran, ukuran apa saja yang perlu kamu ketahui?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menghitung panjang pagar yang dibutuhkan untuk mengelilingi taman berbentuk lingkaran.</li>
+<li>Menentukan luas kolam atau taman bundar untuk memperkirakan biaya perawatan.</li>
+<li>Mengukur keliling meja bundar atau alas karpet berbentuk lingkaran.</li>
+<li>Menghitung bahan penutup atau cat untuk permukaan benda berbentuk lingkaran.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyelesaikan masalah kontekstual yang melibatkan perhitungan luas dan keliling lingkaran dalam kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa contoh masalah sehari-hari yang melibatkan luas dan keliling lingkaran.</li>
+<li>Siswa berdiskusi kelompok untuk menentukan informasi yang diketahui dan yang ditanyakan dari setiap masalah.</li>
+<li>Siswa menuliskan langkah penyelesaian masalah secara sederhana dan runtut.</li>
+<li>Siswa mengerjakan latihan soal kontekstual tentang luas dan keliling lingkaran.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Masalah kontekstual melibatkan penerapan rumus:<br>
+Keliling lingkaran: K = 2πr<br>
+Luas lingkaran: L = πr²<br><br>
+Dalam kehidupan nyata, konsep ini digunakan untuk:<br>
+Menghitung panjang pagar yang mengelilingi taman berbentuk lingkaran.<br>
+Menentukan luas permukaan benda berbentuk lingkaran seperti meja, kolam, atau tutup wadah.<br>
+Menentukan biaya pengecatan atau pelapisan berdasarkan luas.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Taman Bundar</strong><br>
+Sebuah taman berbentuk lingkaran memiliki jari-jari 14 meter. Hitung:<br>
+Keliling taman<br>
+Luas taman<br>
+Gunakan π = 22/7.<br>
+Penyelesaian:<br>
+K = 2 × 22/7 × 14 = 88 meter<br>
+L = 22/7 × 14² = 22/7 × 196 = 616 m²<br><br>
+<strong>Contoh Soal 2: Meja Bundar</strong><br>
+Sebuah meja bundar memiliki diameter 1,4 meter. Hitung luas permukaan meja tersebut. Gunakan π = 3,14.<br>
+Penyelesaian:<br>
+Diameter = 1,4 m → Jari-jari = 0,7 m<br>
+L = 3,14 × 0,7² = 3,14 × 0,49 ≈ 1,54 m²
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah kolam bundar memiliki jari-jari 21 meter. Hitung keliling dan luasnya (gunakan π = 22/7).</li>
+<li>Sebuah tutup wadah berbentuk lingkaran memiliki diameter 28 cm. Hitung luas permukaannya (gunakan π = 22/7).</li>
+<li>Sebuah roda sepeda memiliki jari-jari 35 cm. Hitung keliling roda tersebut (gunakan π = 22/7).</li>
+<li>Buatlah soal cerita sendiri yang melibatkan luas atau keliling lingkaran, lalu selesaikan.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Dalam situasi apa saja kamu bisa menggunakan rumus luas dan keliling lingkaran?</li>
+<li>- Bagaimana kamu menentukan apakah harus menghitung luas atau keliling dalam soal cerita?</li>
+<li>Minta siswa menuliskan satu pengalaman nyata di mana mereka bisa menerapkan konsep lingkaran, lalu ceritakan kepada teman sebangku.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

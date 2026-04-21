@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 5</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menyadari bahwa banyak kegiatan sehari-hari memiliki pola yang berulang atau bertambah secara teratur?</li>
+<li>Di mana saja kamu pernah melihat pola angka dalam aktivitas di rumah atau di lingkungan sekitar?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Pola jadwal kegiatan rutin seperti belajar, olahraga, atau piket kelas.</li>
+<li>Tabungan harian atau mingguan yang jumlahnya bertambah secara tetap.</li>
+<li>Jumlah langkah atau jarak tempuh yang meningkat setiap hari.</li>
+<li>Pola harga barang yang naik secara berkala dalam jangka waktu tertentu.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu mengidentifikasi dan menjelaskan pola bilangan yang ditemukan dalam kehidupan sehari-hari serta mengaitkannya dengan konsep matematika yang telah dipelajari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati berbagai contoh pola bilangan yang muncul dalam kehidupan sehari-hari.</li>
+<li>Siswa berdiskusi berkelompok untuk mengidentifikasi pola dan aturan yang terbentuk.</li>
+<li>Siswa menuliskan contoh pola bilangan yang mereka temui di lingkungan sekitar.</li>
+<li>Siswa mengerjakan latihan dengan menjelaskan pola bilangan dari situasi nyata yang dipilih.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Mengapa Pola Bilangan Penting dalam Kehidupan Nyata?</strong><br>
+Pola bilangan muncul dalam berbagai aspek kehidupan, seperti:<br>
+Jadwal kegiatan (setiap 2 hari sekali)<br>
+Pertumbuhan tanaman (bertambah tinggi setiap minggu)<br>
+Susunan bangku di aula<br>
+Tabungan rutin<br>
+Harga barang yang naik secara berkala<br><br>
+<strong>Contoh Pola dalam Kehidupan:</strong><br>
+Tabungan Mingguan: Menabung Rp10.000 setiap minggu → Pola: 10.000, 20.000, 30.000, ...<br>
+Jumlah Penonton Bertambah: Hari 1: 100 orang, Hari 2: 150 orang, Hari 3: 200 orang → Pola bertambah 50<br>
+Susunan Tangga: Anak tangga bertambah 2 setiap tingkat → Pola: 2, 4, 6, ...
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Seorang siswa menabung Rp5.000 pada minggu pertama dan menambah Rp5.000 setiap minggu.<br>
+Pertanyaan:<br>
+a. Berapa jumlah tabungan pada minggu ke-10?<br>
+b. Berapa total tabungan selama 10 minggu?<br><br>
+<strong>Penyelesaian:</strong><br>
+Pola: 5.000, 10.000, 15.000, ...<br>
+a = 5.000, d = 5.000<br>
+U10 = 5.000 + (10 - 1) × 5.000 = 50.000<br>
+S10 = 10/2 × (5.000 + 50.000) = 5 × 55.000 = 275.000<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Jumlah kursi di aula bertambah 4 setiap baris. Baris pertama memiliki 6 kursi.<br>
+Pertanyaan:<br>
+a. Berapa kursi di baris ke-15?<br>
+b. Berapa total kursi dari baris 1 sampai 15?<br><br>
+<strong>Penyelesaian:</strong><br>
+a = 6, d = 4<br>
+U15 = 6 + (15 - 1) × 4 = 62<br>
+S15 = 15/2 × (6 + 62) = 15/2 × 68 = 510
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Buatlah contoh pola bilangan dari kegiatan sehari-hari yang kamu alami.</li>
+<li>Tentukan rumus suku ke-n dari pola tersebut.</li>
+<li>Hitung suku ke-20 dan total 20 suku pertama dari pola yang kamu buat.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Di mana kamu pernah melihat pola bilangan dalam kehidupan nyata?</li>
+<li>Bagaimana kamu bisa menggunakan pola bilangan untuk merencanakan sesuatu?</li>
+<li>Apa manfaat memahami pola bilangan dalam kehidupan sehari-hari?</li>
+<li>Siswa diminta menuliskan satu pengalaman pribadi yang melibatkan pola bilangan (misalnya tabungan, jadwal, susunan benda), lalu menjelaskan polanya dan bagaimana mereka menyelesaikan masalah menggunakan konsep matematika.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

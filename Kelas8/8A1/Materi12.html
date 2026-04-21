@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 12</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat grafik jalan yang naik, turun, atau datar? Menurutmu apa arti kemiringannya?</li>
+<li>Bagaimana cara mengetahui seberapa cepat suatu nilai berubah dari sebuah grafik?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Grafik jarak tempuh terhadap waktu yang menunjukkan kecepatan kendaraan.</li>
+<li>Grafik tabungan yang bertambah setiap minggu dengan jumlah yang sama.</li>
+<li>Grafik pertumbuhan tinggi badan seseorang dari tahun ke tahun.</li>
+<li>Grafik biaya parkir terhadap lama waktu parkir.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menentukan gradien (kemiringan) dari grafik garis lurus dan menjelaskan maknanya dalam konteks matematika dan kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa grafik garis lurus yang disajikan guru.</li>
+<li>Siswa berdiskusi dalam kelompok untuk membandingkan kemiringan antar grafik.</li>
+<li>Siswa menentukan perubahan nilai pada grafik secara sederhana.</li>
+<li>Siswa mengerjakan latihan untuk menentukan gradien dari grafik garis lurus.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu Gradien?</strong><br>
+Gradien adalah ukuran kemiringan garis lurus. Gradien menunjukkan seberapa besar perubahan nilai y terhadap perubahan nilai x.<br><br>
+<strong>Rumus Gradien dari Dua Titik:</strong><br>
+Jika diketahui dua titik (x₁, y₁) dan (x₂, y₂), maka:<br>
+m = (y₂ - y₁) / (x₂ - x₁)<br><br>
+<strong>Interpretasi Gradien:</strong><br>
+Gradien positif → garis naik dari kiri ke kanan<br>
+Gradien negatif → garis turun dari kiri ke kanan<br>
+Gradien nol → garis mendatar<br>
+Gradien tak terdefinisi → garis tegak lurus (vertikal)<br><br>
+<strong>Contoh dalam Kehidupan Nyata:</strong><br>
+Kecepatan kendaraan (jarak terhadap waktu)<br>
+Biaya parkir tetap per jam<br>
+Pertumbuhan tinggi badan per tahun
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Tentukan gradien dari garis yang melalui titik A(2, 3) dan B(6, 11).<br><br>
+<strong>Penyelesaian:</strong><br>
+m = (11 - 3) / (6 - 2) = 8 / 4 = 2<br>
+<strong>Jawaban:</strong> Gradien = 2<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Grafik garis lurus melalui titik (1, 5) dan (4, -1). Tentukan gradiennya.<br><br>
+<strong>Penyelesaian:</strong><br>
+m = (-1 - 5) / (4 - 1) = -6 / 3 = -2<br>
+<strong>Jawaban:</strong> Gradien = -2
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Tentukan gradien dari garis yang melalui titik (0, 0) dan (5, 10).</li>
+<li>Tentukan gradien dari garis yang melalui titik (3, 7) dan (3, -2). Apa yang terjadi?</li>
+<li>Buat grafik garis lurus dengan gradien 1, 0, dan -1. Jelaskan perbedaannya.</li>
+<li>Buat satu soal kontekstual yang melibatkan gradien, lalu hitung gradiennya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa arti gradien dalam grafik garis lurus?</li>
+<li>Bagaimana kamu bisa menentukan gradien dari grafik tanpa rumus?</li>
+<li>Dalam kehidupan nyata, kapan kamu bisa menggunakan konsep gradien?</li>
+<li>Siswa diminta membuat satu grafik garis lurus berdasarkan dua titik yang mereka pilih sendiri, lalu menghitung gradien dan menjelaskan maknanya dalam konteks yang mereka buat.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

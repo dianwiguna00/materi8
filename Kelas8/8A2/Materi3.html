@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 3</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu ingin mengetahui tinggi sebuah benda tetapi hanya bisa mengukur panjang dan lebarnya saja? Bagaimana cara menentukannya?</li>
+<li>Jika kamu tahu panjang sisi miring suatu segitiga siku-siku, bagaimana caramu mengetahui panjang sisi lainnya?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan tinggi tiang bendera dengan mengetahui panjang kawat penyangga dan jarak kaki tiang ke patok.</li>
+<li>Menghitung jarak sebenarnya saat berjalan menyilang lapangan setelah menempuh dua arah tegak lurus.</li>
+<li>Menentukan panjang diagonal papan atau lantai berbentuk persegi panjang.</li>
+<li>Menghitung tinggi dinding yang dapat dijangkau tangga dengan panjang dan jarak dasar tangga yang diketahui.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menggunakan Teorema Pythagoras untuk menentukan panjang sisi segitiga siku-siku yang belum diketahui.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa gambar segitiga siku-siku dengan salah satu sisi belum diketahui.</li>
+<li>Siswa berdiskusi dalam kelompok kecil untuk menentukan sisi mana yang dicari pada setiap gambar.</li>
+<li>Siswa menuliskan langkah-langkah perhitungan secara runtut berdasarkan informasi yang diberikan.</li>
+<li>Siswa mengerjakan latihan soal untuk menentukan panjang sisi segitiga siku-siku yang belum diketahui.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Rumus Teorema Pythagoras:<br>
+c² = a² + b²<br>
+Di mana:<br>
+c = sisi miring (hipotenusa)<br>
+a, b = kaki-kaki segitiga<br><br>
+Jika yang dicari adalah salah satu kaki:<br>
+a² = c² - b² atau b² = c² - a²
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Mencari Sisi Miring</strong><br>
+Sebuah segitiga siku-siku memiliki panjang kaki 9 cm dan 12 cm. Hitung panjang sisi miringnya.<br>
+Penyelesaian:<br>
+c² = 9² + 12² = 81 + 144 = 225 ⇒ c = √225 = 15<br><br>
+<strong>Contoh Soal 2: Mencari Kaki Segitiga</strong><br>
+Sebuah segitiga siku-siku memiliki sisi miring 13 cm dan salah satu kaki 5 cm. Hitung panjang kaki lainnya.<br>
+Penyelesaian:<br>
+b² = 13² - 5² = 169 - 25 = 144 ⇒ b = √144 = 12
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah segitiga siku-siku memiliki panjang kaki 7 cm dan 24 cm. Hitung panjang sisi miringnya.</li>
+<li>Jika sisi miring sebuah segitiga siku-siku adalah 17 cm dan salah satu kakinya 8 cm, berapa panjang kaki lainnya?</li>
+<li>Sebuah segitiga siku-siku memiliki sisi miring 10 cm dan salah satu kaki 6 cm. Hitung panjang kaki lainnya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Bagaimana cara menentukan sisi yang harus dicari dalam segitiga siku-siku?</li>
+<li>- Apa yang terjadi jika kita salah menentukan sisi miring?</li>
+<li>Minta siswa menuliskan langkah-langkah yang mereka lakukan saat menyelesaikan soal Teorema Pythagoras, lalu tukar dengan teman untuk saling memberi umpan balik.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

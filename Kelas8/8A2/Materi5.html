@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 5</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat peta atau denah sekolah yang menggunakan titik-titik dan garis? Bagaimana cara menentukan jarak antara dua titik tersebut?</li>
+<li>Saat bermain game atau menggunakan aplikasi peta, pernahkah kamu berpikir bagaimana jarak antar dua posisi dihitung?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan jarak antara dua lokasi pada peta sederhana menggunakan koordinat.</li>
+<li>Menghitung jarak perpindahan pion pada papan permainan berbentuk kotak-kotak.</li>
+<li>Menentukan jarak antara dua titik posisi di lapangan olahraga yang diberi garis tegak lurus.</li>
+<li>Mengukur jarak antar dua bangunan pada denah sekolah atau rumah.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menggunakan Teorema Pythagoras untuk menghitung jarak antara dua titik pada bidang koordinat Kartesius.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar bidang koordinat yang memuat beberapa titik.</li>
+<li>Siswa berdiskusi berkelompok untuk menentukan selisih arah horizontal dan vertikal antar dua titik.</li>
+<li>Siswa menggambar segitiga siku-siku yang terbentuk dari dua titik pada bidang koordinat.</li>
+<li>Siswa mengerjakan latihan sederhana untuk menentukan jarak antara dua titik yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Bidang Koordinat Kartesius</strong><br>
+Bidang koordinat terdiri dari dua sumbu:<br>
+Sumbu X (horizontal)<br>
+Sumbu Y (vertikal)<br>
+Setiap titik dinyatakan dalam pasangan (x, y).<br><br>
+<strong>Jarak Dua Titik</strong><br>
+Untuk dua titik A(x₁, y₁) dan B(x₂, y₂), jarak antara keduanya dapat dihitung menggunakan Teorema Pythagoras:<br>
+Jarak AB = √((x₂ - x₁)² + (y₂ - y₁)²)<br>
+Rumus ini berasal dari segitiga siku-siku yang terbentuk antara dua titik.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Jarak Dua Titik</strong><br>
+Tentukan jarak antara titik A(2, 3) dan B(7, 11).<br>
+Jarak AB = √((7 - 2)² + (11 - 3)²)<br>
+= √(25 + 64)<br>
+= √89 ≈ 9,43<br><br>
+<strong>Contoh Soal 2: Titik di Kuadran Berbeda</strong><br>
+Hitung jarak antara titik P(-4, 2) dan Q(3, -2).<br>
+Jarak PQ = √((3 - (-4))² + (-2 - 2)²)<br>
+= √(49 + 16)<br>
+= √65 ≈ 8,06
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Hitung jarak antara titik A(1, 2) dan B(4, 6).</li>
+<li>Hitung jarak antara titik C(-3, -5) dan D(2, -1).</li>
+<li>Tentukan dua titik pada bidang koordinat yang jaraknya 10 satuan, lalu buktikan dengan perhitungan.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana Teorema Pythagoras membantu kita dalam menghitung jarak antara dua titik?</li>
+<li>Apa manfaat mengetahui jarak dua titik dalam kehidupan nyata (misalnya pada peta atau desain grafis)?</li>
+<li>Minta siswa menggambar dua titik pada bidang koordinat, lalu menghitung jaraknya dan menjelaskan langkah-langkahnya kepada teman sebangku.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

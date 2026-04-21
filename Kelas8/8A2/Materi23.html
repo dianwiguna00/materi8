@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 23</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat hasil nilai ulangan atau survei kebiasaan teman-temanmu? Informasi apa saja yang bisa kamu ketahui dari data tersebut?</li>
+<li>Jika kamu diminta menentukan kebiasaan paling umum di kelas (misalnya waktu belajar atau jenis hobi), data apa yang perlu kamu kumpulkan dan bagaimana cara menyimpulkannya?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan kebiasaan waktu belajar siswa berdasarkan hasil survei kelas.</li>
+<li>Menganalisis data penjualan jajanan di kantin sekolah untuk mengetahui makanan yang paling diminati.</li>
+<li>Membaca dan menyimpulkan data penggunaan media sosial di kalangan remaja.</li>
+<li>Mengolah data kehadiran siswa untuk mengetahui pola kehadiran selama seminggu.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyelesaikan masalah kontekstual yang melibatkan pengumpulan, penyajian, dan analisis data menggunakan ukuran pemusatan (rata-rata, median, modus) dan interpretasi grafik.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati contoh data nyata yang disajikan dalam tabel atau diagram.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menentukan informasi penting dari data tersebut.</li>
+<li>Siswa berlatih menghitung dan menggunakan ukuran pemusatan data sesuai kebutuhan masalah.</li>
+<li>Siswa menyimpulkan hasil analisis data dan menyampaikan secara lisan atau tertulis.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Masalah kontekstual dalam statistika menggabungkan berbagai keterampilan:<br>
+Mengumpulkan data dari situasi nyata<br>
+Menyajikan data dalam bentuk tabel atau diagram<br>
+Menghitung ukuran pemusatan data<br>
+Menarik kesimpulan dari data yang dianalisis<br><br>
+<strong>Contoh Situasi Nyata:</strong><br>
+Menentukan rata-rata nilai ujian siswa<br>
+Menganalisis tren penjualan produk<br>
+Menyimpulkan kebiasaan siswa dari data survei
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Nilai Ujian</strong><br>
+Seorang guru mencatat nilai ujian matematika dari 10 siswa:<br>
+70, 75, 80, 85, 90, 85, 80, 75, 70, 95<br>
+Pertanyaan:<br>
+a. Hitung rata-rata, median, dan modus nilai<br>
+b. Buat tabel frekuensi dan diagram batang<br>
+c. Apa kesimpulan yang dapat diambil dari data tersebut?<br>
+Jawaban:<br>
+Rata-rata: 785 / 10 = 78,5<br>
+Median: urutkan → median = 80<br>
+Modus: 70, 75, 80, 85 (muncul 2 kali) → multi-modus<br>
+Kesimpulan: nilai siswa cukup merata, tidak ada nilai yang sangat dominan<br><br>
+<strong>Contoh Soal 2: Survei Waktu Belajar</strong><br>
+Hasil survei waktu belajar siswa per hari (dalam jam):<br>
+2, 3, 2, 4, 3, 3, 2, 5, 4, 3<br>
+Pertanyaan:<br>
+a. Hitung rata-rata waktu belajar<br>
+b. Tentukan modus dan median<br>
+c. Buat diagram lingkaran dari data tersebut
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Lakukan survei kecil tentang jumlah waktu bermain gadget siswa dalam sehari. Sajikan dalam tabel dan hitung rata-rata, median, dan modusnya.</li>
+<li>Buat soal cerita yang melibatkan data penjualan makanan ringan selama seminggu, lalu analisis menggunakan diagram garis dan ukuran pemusatan.</li>
+<li>Buat kesimpulan dari data yang kamu kumpulkan sendiri dan jelaskan alasanmu.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Bagaimana analisis data membantu kamu memahami kebiasaan atau pola dalam kehidupan sehari-hari?</li>
+<li>- Apa tantangan yang kamu hadapi saat menggabungkan berbagai teknik statistika?</li>
+<li>Minta siswa membuat laporan mini dari data yang mereka kumpulkan dan analisis, lalu presentasikan kepada kelompok atau kelas.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

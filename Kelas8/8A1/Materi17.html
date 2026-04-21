@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 17</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat masalah belanja atau pembagian tugas yang melibatkan dua jenis data sekaligus?</li>
+<li>Jika ada dua informasi yang saling berkaitan, bagaimana cara menuliskannya agar mudah dianalisis?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan harga dua jenis barang dari dua transaksi pembelian yang berbeda.</li>
+<li>Menghitung jumlah siswa laki-laki dan perempuan dari informasi total dan perbandingan.</li>
+<li>Menentukan kombinasi makanan atau paket pembelian dengan harga tertentu.</li>
+<li>Membandingkan jarak dan waktu dari dua rute perjalanan yang berbeda.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyusun sistem persamaan linear dua variabel (SPLDV) dari situasi nyata dan menjelaskan makna dari masing-masing variabel serta koefisien dalam konteks tersebut.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati permasalahan kontekstual yang melibatkan dua variabel berbeda.</li>
+<li>Siswa berdiskusi berkelompok untuk menentukan informasi penting dan variabel yang digunakan.</li>
+<li>Siswa menyusun dua persamaan linear dari situasi yang diberikan.</li>
+<li>Siswa mengerjakan latihan menyusun sistem persamaan linear dua variabel dari masalah sehari-hari.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu SPLDV?</strong><br>
+SPLDV adalah dua persamaan linear yang memiliki dua variabel dan saling berkaitan. Tujuannya adalah mencari nilai kedua variabel yang memenuhi kedua persamaan secara bersamaan.<br><br>
+<strong>Bentuk Umum SPLDV:</strong><br>
+a₁x + b₁y = c₁<br>
+a₂x + b₂y = c₂<br><br>
+<strong>Langkah Menyusun SPLDV dari Masalah Kontekstual:</strong><br>
+Pahami situasi dan identifikasi dua variabel.<br>
+Buat dua persamaan berdasarkan informasi yang diberikan.<br>
+Tentukan bentuk SPLDV.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Seorang pedagang menjual 2 jenis buah: apel dan jeruk.<br>
+- 3 apel dan 2 jeruk seharga Rp20.000<br>
+- 2 apel dan 4 jeruk seharga Rp22.000<br><br>
+Pertanyaan:<br>
+a. Tentukan SPLDV dari informasi di atas.<br>
+b. Jelaskan arti dari masing-masing variabel.<br><br>
+<strong>Penyelesaian:</strong><br>
+Misal:<br>
+x = harga sebuah apel<br>
+y = harga sebuah jeruk<br>
+3x + 2y = 20000<br>
+2x + 4y = 22000<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Dalam sebuah lomba, total skor dua peserta adalah 180.<br>
+- Skor peserta A dua kali skor peserta B.<br><br>
+Pertanyaan:<br>
+a. Tentukan SPLDV dari informasi di atas.<br>
+b. Tentukan nilai skor masing-masing peserta.<br><br>
+<strong>Penyelesaian:</strong><br>
+Misal:<br>
+x = skor peserta A<br>
+y = skor peserta B<br>
+x + y = 180<br>
+x = 2y
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Seorang siswa membeli 4 pensil dan 3 buku seharga Rp31.000.<br>
+Temannya membeli 2 pensil dan 5 buku seharga Rp39.000.<br>
+a. Tentukan SPLDV<br>
+b. Jelaskan arti dari masing-masing variabel</li>
+<li>Buat satu soal kontekstual sendiri yang melibatkan dua variabel, lalu:<br>
+a. Tentukan SPLDV<br>
+b. Jelaskan makna dari setiap komponen dalam persamaan</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu menentukan variabel dalam soal cerita?</li>
+<li>Apa tantangan dalam menyusun SPLDV dari situasi nyata?</li>
+<li>Apakah kamu bisa membuat sendiri soal SPLDV dari kehidupan sehari-hari?</li>
+<li>Siswa diminta menuliskan satu situasi nyata (misalnya: belanja, skor lomba, jumlah barang) dan menyusun SPLDV berdasarkan situasi tersebut, lalu menjelaskan makna dari masing-masing variabel dan koefisien.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

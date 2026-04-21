@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 16</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu membuka kardus atau kotak kemasan hingga menjadi bentuk datar? Menurutmu, apakah bentuk itu bisa dilipat kembali?</li>
+<li>Jika sebuah bangun ruang dibuka pada semua sisinya, bentuk apa yang akan kamu lihat?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Membuka kardus bekas agar bisa dilipat kembali atau didaur ulang.</li>
+<li>Membuat kemasan makanan sederhana dari kertas karton.</li>
+<li>Merancang mainan atau model bangun ruang dari kertas lipat.</li>
+<li>Menentukan pola potongan kertas sebelum membuat kotak hadiah.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyajikan jaring-jaring dari bangun ruang sisi datar seperti kubus, balok, prisma, dan limas, serta memahami hubungan antara jaring-jaring dan bentuk 3D-nya.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar jaring-jaring berbagai bangun ruang sisi datar.</li>
+<li>Siswa berdiskusi kelompok untuk mencocokkan jaring-jaring dengan bangun ruangnya.</li>
+<li>Siswa menggambar jaring-jaring sederhana dari bangun ruang yang ditentukan.</li>
+<li>Siswa melipat model jaring-jaring kertas untuk membuktikan bentuk bangun ruangnya.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu Jaring-Jaring Bangun Ruang?</strong><br>
+Jaring-jaring adalah bentuk datar dari bangun ruang yang diperoleh dengan membuka sisi-sisinya. Jaring-jaring membantu memahami struktur bangun ruang dan menghitung luas permukaannya.<br><br>
+<strong>Ciri-Ciri Jaring-Jaring:</strong><br>
+Terdiri dari bidang datar (persegi, persegi panjang, segitiga).<br>
+Dapat dilipat kembali menjadi bentuk 3D.<br>
+Setiap sisi pada jaring-jaring mewakili sisi pada bangun ruang.<br><br>
+<strong>Contoh Bangun dan Jaring-Jaring:</strong><br>
+Kubus: 6 persegi<br>
+Balok: 6 persegi panjang (atau kombinasi persegi dan persegi panjang)<br>
+Prisma segitiga: 2 segitiga + 3 persegi panjang<br>
+Limas segiempat: 1 persegi + 4 segitiga
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Jaring-Jaring Kubus</strong><br>
+Gambarlah jaring-jaring kubus dan beri label sisi-sisinya. Tentukan luas permukaan jika panjang sisi kubus adalah 5 cm.<br>
+Penyelesaian:<br>
+Jaring-jaring terdiri dari 6 persegi.<br>
+Luas permukaan:<br>
+L = 6 × 5² = 6 × 25 = 150 cm²<br><br>
+<strong>Contoh Soal 2: Jaring-Jaring Prisma Segitiga</strong><br>
+Gambarlah jaring-jaring prisma segitiga dengan alas segitiga dan sisi tegak berbentuk persegi panjang. Tentukan luas permukaan jika:<br>
+Alas segitiga: panjang alas 6 cm, tinggi 4 cm<br>
+Sisi tegak: masing-masing 5 cm × 10 cm, 6 cm × 10 cm, dan 7 cm × 10 cm<br>
+Penyelesaian:<br>
+Luas alas:<br>
+½ × 6 × 4 = 12 cm²<br>
+Luas permukaan:<br>
+2 × 12 + (5×10 + 6×10 + 7×10) = 24 + 180 = 204 cm²
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Gambarlah jaring-jaring balok dan beri label panjang, lebar, dan tinggi.</li>
+<li>Gambarlah jaring-jaring limas segiempat dan tentukan luas permukaannya jika alasnya 6 cm × 6 cm dan sisi tegaknya masing-masing memiliki luas 18 cm².</li>
+<li>Buatlah jaring-jaring prisma segitiga dan hitung luas permukaannya jika diketahui ukuran sisi-sisinya.</li>
+<li>Jelaskan bagaimana jaring-jaring membantu dalam menghitung luas permukaan bangun ruang.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Apa tantangan yang kamu hadapi saat menggambar jaring-jaring bangun ruang?</li>
+<li>- Bagaimana jaring-jaring membantu kamu memahami bentuk 3D?</li>
+<li>Minta siswa membuat jaring-jaring dari kertas, lalu melipatnya menjadi bentuk bangun ruang. Diskusikan bagaimana setiap sisi saling terhubung.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

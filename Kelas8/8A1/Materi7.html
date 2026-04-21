@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 7</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat daftar nilai siswa dan memperhatikan nama siswa serta nilai yang mereka peroleh?</li>
+<li>Jika semua nilai ulangan dikumpulkan, apakah semua nilai itu pasti dimiliki oleh setiap siswa?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Daftar siswa dan nilai ulangan yang diperoleh di kelas.</li>
+<li>Hubungan antara hari dan mata pelajaran pada jadwal sekolah.</li>
+<li>Hubungan antara nomor rumah dan pemiliknya di suatu lingkungan.</li>
+<li>Data tinggi badan siswa yang dicatat dalam buku kesehatan sekolah.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu mengidentifikasi dan membedakan domain, kodomain, dan range dari suatu relasi atau fungsi serta menjelaskan maknanya dalam konteks kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati contoh relasi dari data sederhana yang disajikan guru.</li>
+<li>Siswa berdiskusi dalam kelompok untuk menentukan mana yang termasuk domain, kodomain, dan range.</li>
+<li>Siswa menuliskan hasil diskusi dalam tabel atau daftar pasangan.</li>
+<li>Siswa mengerjakan latihan untuk mengidentifikasi domain, kodomain, dan range dari relasi yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>1. Domain</strong><br>
+Himpunan semua nilai input (masukan) dari suatu relasi atau fungsi.<br>
+Contoh: Nama siswa yang mengikuti ujian.<br><br>
+<strong>2. Kodomain</strong><br>
+Himpunan semua kemungkinan output (keluaran) yang dapat dihubungkan dengan domain.<br>
+Contoh: Semua nilai yang mungkin diperoleh (0–100).<br><br>
+<strong>3. Range</strong><br>
+Himpunan nilai output yang benar-benar berpasangan dengan domain.<br>
+Contoh: Nilai yang benar-benar diperoleh siswa (misalnya: 75, 80, 90).<br><br>
+<strong>Ilustrasi Sederhana:</strong><br>
+Jika relasi adalah:<br>
+- A → 75<br>
+- B → 80<br>
+- C → 90<br>
+Maka:<br>
+- Domain = {A, B, C}<br>
+- Kodomain = {0, 1, 2, ..., 100}<br>
+- Range = {75, 80, 90}
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Diberikan relasi antara siswa dan nilai:<br>
+- Dika → 85<br>
+- Rani → 90<br>
+- Sinta → 75<br><br>
+Pertanyaan:<br>
+a. Tentukan domain, kodomain, dan range.<br>
+b. Apakah relasi ini fungsi?<br><br>
+<strong>Jawaban:</strong><br>
+- Domain = {Dika, Rani, Sinta}<br>
+- Kodomain = {0–100}<br>
+- Range = {85, 90, 75}<br>
+- Ya, karena setiap siswa memiliki satu nilai.<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Relasi antara hari dan kegiatan:<br>
+- Senin → Upacara<br>
+- Selasa → Matematika<br>
+- Rabu → IPA<br>
+- Kamis → Bahasa<br>
+- Jumat → Seni<br><br>
+Pertanyaan:<br>
+a. Tentukan domain, kodomain, dan range.<br>
+b. Apakah relasi ini fungsi?<br><br>
+<strong>Jawaban:</strong><br>
+- Domain = {Senin, Selasa, Rabu, Kamis, Jumat}<br>
+- Kodomain = {Upacara, Matematika, IPA, Bahasa, Seni, Olahraga, Prakarya}<br>
+- Range = {Upacara, Matematika, IPA, Bahasa, Seni}<br>
+- Ya, karena setiap hari hanya memiliki satu kegiatan.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Buat relasi antara siswa dan ekstrakurikuler yang diikuti.<br>
+a. Tentukan domain, kodomain, dan range.<br>
+b. Apakah relasi tersebut fungsi?</li>
+<li>Relasi antara nomor rumah dan pemilik rumah:<br>
+a. Tentukan domain, kodomain, dan range.<br>
+b. Apakah relasi tersebut fungsi?</li>
+<li>Buat relasi dari kehidupan sehari-hari dan identifikasi domain, kodomain, dan range-nya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa perbedaan antara kodomain dan range?</li>
+<li>Mengapa penting mengetahui domain dan range dalam suatu fungsi?</li>
+<li>Dapatkah kamu menemukan contoh fungsi dari kehidupanmu sendiri?</li>
+<li>Siswa diminta menuliskan satu relasi dari kehidupan mereka (misalnya: hari dan kegiatan, siswa dan nilai, atau lainnya), lalu mengidentifikasi domain, kodomain, dan range-nya serta menjelaskan apakah relasi tersebut merupakan fungsi.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

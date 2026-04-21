@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 4</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat tangga yang disandarkan ke dinding rumah? Menurutmu, bagian mana saja yang membentuk segitiga siku-siku?</li>
+<li>Saat berjalan memotong lapangan dari sudut ke sudut, apakah jaraknya sama dengan berjalan lurus lalu berbelok? Mengapa bisa berbeda?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan tinggi dinding yang dapat dijangkau oleh tangga dengan panjang tertentu.</li>
+<li>Menghitung jarak terpendek saat menyebrangi lapangan atau halaman sekolah secara diagonal.</li>
+<li>Menentukan panjang kabel atau kawat penyangga pada tiang bendera.</li>
+<li>Mengukur jarak diagonal pada lantai, papan tulis, atau taman berbentuk persegi panjang.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyelesaikan masalah kontekstual yang melibatkan Teorema Pythagoras dalam kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa soal cerita yang berkaitan dengan situasi nyata berbentuk segitiga siku-siku.</li>
+<li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi informasi yang diketahui dan yang ditanyakan.</li>
+<li>Siswa menuliskan model segitiga siku-siku dari masalah yang diberikan.</li>
+<li>Siswa mengerjakan latihan soal kontekstual dan menjelaskan langkah penyelesaiannya secara lisan atau tertulis.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Teorema Pythagoras tidak hanya digunakan dalam soal matematika abstrak, tetapi juga dalam situasi nyata, seperti:<br>
+Mengukur jarak diagonal (misalnya: layar TV, lapangan, tangga).<br>
+Menentukan jarak terpendek antara dua titik.<br>
+Menyelesaikan masalah arsitektur dan konstruksi.<br><br>
+<strong>Langkah-langkah Menyelesaikan Masalah Kontekstual:</strong><br>
+Pahami situasi dan identifikasi segitiga siku-siku.<br>
+Tentukan sisi-sisi yang diketahui dan yang dicari.<br>
+Gunakan rumus Teorema Pythagoras:<br>
+c² = a² + b²<br>
+Hitung dan tafsirkan hasilnya sesuai konteks.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Tangga Menyandar ke Dinding</strong><br>
+Sebuah tangga sepanjang 10 meter disandarkan ke dinding. Ujung bawah tangga berjarak 6 meter dari kaki dinding. Berapa tinggi dinding yang dijangkau tangga?<br>
+Penyelesaian:<br>
+c = 10, a = 6<br>
+b² = c² - a² = 100 - 36 = 64<br>
+b = √64 = 8<br>
+Jadi, tinggi dinding = 8 meter<br><br>
+<strong>Contoh Soal 2: Menyebrangi Lapangan</strong><br>
+Seorang siswa ingin menyeberangi lapangan persegi panjang dari sudut ke sudut secara diagonal. Panjang lapangan 30 m dan lebarnya 40 m. Berapa meter jarak yang ditempuh siswa?<br>
+Penyelesaian:<br>
+c² = 30² + 40² = 900 + 1600 = 2500<br>
+c = √2500 = 50<br>
+Jadi, jarak diagonal = 50 meter
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah layar TV berbentuk persegi panjang memiliki panjang 48 cm dan lebar 36 cm. Hitung panjang diagonal layarnya.</li>
+<li>Sebuah tiang bendera ditopang oleh kawat sepanjang 13 meter yang diikat ke tanah sejauh 5 meter dari dasar tiang. Berapa tinggi tiang bendera?</li>
+<li>Seorang siswa berjalan 9 meter ke timur dan kemudian 12 meter ke utara. Berapa jarak langsung dari titik awal ke titik akhir?</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Dalam situasi nyata apa saja kamu bisa menggunakan Teorema Pythagoras?</li>
+<li>- Apa tantangan yang kamu hadapi saat menerapkan rumus ini dalam soal cerita?</li>
+<li>Minta siswa membuat satu soal cerita sendiri yang melibatkan Teorema Pythagoras, lalu bertukar soal dengan teman untuk saling menyelesaikan.</li>
+</ol>
+</div>
+
+</div>
+</div>
+</body>
+</html>

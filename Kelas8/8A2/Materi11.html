@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 11</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mengamati bentuk kotak makanan, kardus sepatu, atau dadu? Menurutmu, apa persamaan bentuk-bentuk tersebut?</li>
+<li>Jika kamu memegang sebuah bangun ruang, bagian apa saja yang bisa kamu hitung atau amati dari bangun tersebut?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Kotak kado atau kardus paket yang berbentuk kubus dan balok.</li>
+<li>Tenda pramuka atau atap rumah sederhana yang menyerupai prisma atau limas.</li>
+<li>Akuarium, lemari, atau kulkas yang berbentuk balok.</li>
+<li>Bangunan atau mainan edukatif yang tersusun dari berbagai bangun ruang sisi datar.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu mengidentifikasi dan menjelaskan sifat-sifat bangun ruang sisi datar: kubus, balok, prisma, dan limas.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati gambar atau benda nyata yang mewakili kubus, balok, prisma, dan limas.</li>
+<li>Siswa berdiskusi dalam kelompok untuk mengidentifikasi jumlah sisi, rusuk, dan titik sudut setiap bangun.</li>
+<li>Siswa mencatat perbedaan dan persamaan sifat-sifat bangun ruang yang diamati.</li>
+<li>Siswa mengerjakan latihan mengelompokkan bangun ruang berdasarkan sifat-sifatnya.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Bangun Ruang Sisi Datar adalah bangun tiga dimensi yang dibatasi oleh bidang-bidang datar (sisi).<br>
+Kubus: semua sisi berbentuk persegi dan sama besar.<br>
+Balok: sisi berbentuk persegi panjang, pasangan sisi yang berhadapan sama besar.<br>
+Prisma: memiliki dua bidang alas yang kongruen dan sejajar, serta sisi tegak berbentuk persegi panjang.<br>
+Limas: memiliki satu bidang alas dan sisi-sisi tegak berbentuk segitiga yang bertemu di satu titik puncak.<br><br>
+Sifat-Sifat Umum yang Diamati:<br>
+Jumlah sisi<br>
+Jumlah rusuk<br>
+Jumlah titik sudut<br>
+Bentuk alas dan sisi tegak<br>
+Simetri dan jaring-jaring
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Identifikasi Bangun</strong><br>
+Perhatikan gambar bangun ruang berikut. Bangun tersebut memiliki:<br>
+6 sisi berbentuk persegi<br>
+12 rusuk<br>
+8 titik sudut<br>
+Pertanyaan:<br>
+Bangun apakah itu?<br>
+Sebutkan sifat-sifatnya.<br>
+Jawaban:<br>
+a. Kubus<br>
+b. Semua sisi sama besar, berbentuk persegi, simetri tinggi, memiliki 12 rusuk dan 8 titik sudut.<br><br>
+<strong>Contoh Soal 2: Bandingkan Prisma dan Limas</strong><br>
+Jawaban:<br>
+Prisma segitiga: 5 sisi (2 segitiga, 3 persegi panjang), 9 rusuk, 6 titik sudut.<br>
+Limas segitiga: 4 sisi (1 segitiga alas, 3 segitiga tegak), 6 rusuk, 4 titik sudut.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebutkan jumlah sisi, rusuk, dan titik sudut dari balok.</li>
+<li>Jelaskan perbedaan antara prisma segiempat dan limas segiempat.</li>
+<li>Gambarlah jaring-jaring dari kubus dan beri label sisi-sisinya.</li>
+<li>Identifikasi bangun ruang yang memiliki alas berbentuk segiempat dan sisi tegak berbentuk segitiga.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>- Bangun ruang mana yang paling sering kamu temui dalam kehidupan sehari-hari?</li>
+<li>- Apa manfaat memahami sifat-sifat bangun ruang dalam dunia nyata?</li>
+<li>Minta siswa membawa benda nyata dari rumah (misalnya kotak, kaleng, mainan) dan mengidentifikasi bangun ruang serta sifat-sifatnya.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

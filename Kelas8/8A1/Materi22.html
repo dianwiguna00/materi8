@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 22</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mengalami kesulitan menentukan harga satuan barang dari dua transaksi belanja yang berbeda?</li>
+<li>Bagaimana cara menggunakan perhitungan matematika agar pengeluaran keuangan menjadi lebih terkontrol?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan harga satuan barang dari dua transaksi belanja yang berbeda.</li>
+<li>Menghitung biaya kombinasi barang agar sesuai dengan anggaran yang dimiliki.</li>
+<li>Membandingkan dua paket makanan untuk mengetahui pilihan yang lebih hemat.</li>
+<li>Menyusun perencanaan belanja harian atau mingguan secara sederhana.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyusun dan menyelesaikan sistem persamaan linear dua variabel dari masalah keuangan sederhana serta menafsirkan solusi dalam konteks kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati permasalahan keuangan sederhana yang disajikan dalam bentuk cerita.</li>
+<li>Siswa berdiskusi berkelompok untuk menentukan variabel dan menyusun dua persamaan dari masalah tersebut.</li>
+<li>Siswa menyelesaikan SPLDV dengan metode yang dipilih secara bersama-sama.</li>
+<li>Siswa mengerjakan latihan serupa secara mandiri dan menafsirkan hasilnya dalam konteks keuangan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Mengapa SPLDV Relevan dalam Masalah Keuangan?</strong><br>
+SPLDV digunakan untuk menyelesaikan masalah yang melibatkan dua variabel, seperti:<br>
+Harga dua jenis barang<br>
+Jumlah uang yang dibelanjakan<br>
+Perbandingan pengeluaran dan pendapatan<br><br>
+<strong>Langkah-langkah:</strong><br>
+Identifikasi dua variabel dalam masalah keuangan.<br>
+Susun dua persamaan berdasarkan informasi yang diberikan.<br>
+Selesaikan SPLDV dengan metode yang sesuai (substitusi, eliminasi, grafik).<br>
+Tafsirkan hasilnya dalam konteks keuangan.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Seorang ibu membeli 3 kg beras dan 2 liter minyak goreng seharga Rp76.000.<br>
+Temannya membeli 2 kg beras dan 4 liter minyak goreng seharga Rp88.000.<br>
+Tentukan harga per kg beras dan per liter minyak goreng.<br><br>
+<strong>Langkah:</strong><br>
+Misal: x = harga beras per kg, y = harga minyak per liter<br>
+SPLDV:<br>
+3x + 2y = 76.000<br>
+2x + 4y = 88.000<br><br>
+<strong>Penyelesaian:</strong><br>
+Kalikan persamaan pertama dengan 2:<br>
+6x + 4y = 152.000<br>
+Kurangi dengan persamaan kedua:<br>
+4x = 64.000 ⇒ x = 16.000<br>
+Substitusi: 3(16.000) + 2y = 76.000 ⇒ y = 14.000<br><br>
+<strong>Jawaban:</strong><br>
+Harga beras = Rp16.000/kg, minyak = Rp14.000/liter<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Dua orang membeli paket makanan:<br>
+- Paket A: 2 nasi dan 1 ayam = Rp25.000<br>
+- Paket B: 1 nasi dan 2 ayam = Rp30.000<br>
+Tentukan harga nasi dan ayam.<br><br>
+<strong>Penyelesaian:</strong><br>
+Misal: x = harga nasi, y = harga ayam<br>
+SPLDV:<br>
+2x + y = 25.000<br>
+x + 2y = 30.000<br><br>
+<strong>Jawaban:</strong> (x, y) = (10.000, 5.000)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Seorang siswa membeli 4 buku dan 3 pensil seharga Rp43.000. Temannya membeli 2 buku dan 5 pensil seharga Rp41.000.<br>
+a. Tentukan SPLDV<br>
+b. Selesaikan<br>
+c. Tafsirkan hasilnya</li>
+<li>Buat satu soal kontekstual keuangan sendiri (misalnya: belanja, tabungan, pengeluaran), susun SPLDV, selesaikan, dan tafsirkan hasilnya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana SPLDV membantu menyelesaikan masalah keuangan sehari-hari?</li>
+<li>Apa tantangan dalam menyusun persamaan dari soal cerita?</li>
+<li>Apakah kamu bisa membuat dan menyelesaikan SPLDV dari pengalaman belanja pribadi?</li>
+<li>Siswa diminta menuliskan satu pengalaman belanja atau transaksi keuangan sederhana, menyusun SPLDV berdasarkan situasi tersebut, menyelesaikannya, dan menjelaskan makna dari solusi yang diperoleh.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

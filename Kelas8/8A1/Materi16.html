@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 16</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat grafik lalu mencoba menebak arti angka atau titik yang ada di dalamnya?</li>
+<li>Menurutmu, bagaimana grafik bisa membantu memahami suatu situasi tanpa harus membaca penjelasan panjang?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Grafik biaya parkir yang menunjukkan hubungan antara waktu parkir dan total biaya.</li>
+<li>Grafik tabungan yang menunjukkan pertambahan uang setiap minggu.</li>
+<li>Grafik jarak tempuh kendaraan terhadap waktu perjalanan.</li>
+<li>Grafik pertumbuhan tinggi badan anak dari tahun ke tahun.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu membaca dan menginterpretasikan grafik garis lurus yang merepresentasikan situasi nyata, serta menjelaskan makna titik, gradien, dan bentuk grafik dalam konteks tersebut.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Siswa mengamati beberapa grafik garis lurus yang menggambarkan situasi kehidupan nyata.</li>
+<li>Siswa berdiskusi berkelompok untuk menjelaskan arti titik, garis, dan arah grafik yang diamati.</li>
+<li>Siswa menghubungkan informasi pada grafik dengan situasi nyata yang sesuai.</li>
+<li>Siswa mengerjakan latihan menafsirkan informasi sederhana dari grafik yang diberikan.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Apa itu Interpretasi Grafik?</strong><br>
+Interpretasi grafik berarti memahami arti dari grafik dalam konteks kehidupan nyata, seperti:<br>
+Titik potong sumbu-y → nilai awal<br>
+Gradien → laju perubahan<br>
+Titik pada grafik → hubungan antara dua variabel<br><br>
+<strong>Contoh Situasi Nyata:</strong><br>
+Grafik biaya parkir terhadap waktu<br>
+Grafik pertumbuhan tinggi badan terhadap usia<br>
+Grafik jarak tempuh terhadap waktu<br><br>
+<strong>Contoh Grafik:</strong><br>
+Persamaan: y = 10x + 50<br>
+- y = jumlah tabungan<br>
+- x = minggu ke-x<br>
+Interpretasi:<br>
+- Titik (0, 50) → tabungan awal Rp50.000<br>
+- Gradien 10 → tabungan bertambah Rp10.000 per minggu
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1:</strong><br>
+Grafik menunjukkan hubungan antara jumlah buku yang dibeli dan total harga.<br>
+Persamaan: y = 25x<br><br>
+Pertanyaan:<br>
+Apa arti dari gradien 25?<br>
+Berapa harga 4 buku?<br>
+Jika seseorang membayar Rp200.000, berapa buku yang dibeli?<br><br>
+<strong>Jawaban:</strong><br>
+a. Setiap buku seharga Rp25.000<br>
+b. y = 25 × 4 = 100.000<br>
+c. 200.000 = 25x ⇒ x = 8<br><br>
+<strong>Contoh Soal 2:</strong><br>
+Grafik menunjukkan jarak tempuh kendaraan terhadap waktu.<br>
+Persamaan: y = 60x<br><br>
+Pertanyaan:<br>
+Apa arti dari gradien 60?<br>
+Berapa jarak tempuh dalam 3 jam?<br>
+Jika kendaraan menempuh 180 km, berapa lama waktu yang dibutuhkan?<br><br>
+<strong>Jawaban:</strong><br>
+a. Kendaraan menempuh 60 km per jam<br>
+b. y = 60 × 3 = 180 km<br>
+c. 180 = 60x ⇒ x = 3 jam
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Grafik menunjukkan biaya les privat: y = 75x + 50<br>
+Apa arti dari angka 75 dan 50?<br>
+Hitung biaya untuk 4 sesi les.<br>
+Jika membayar Rp350.000, berapa sesi yang diikuti?</li>
+<li>Buat grafik dari situasi nyata (misalnya: konsumsi air per hari, biaya transportasi, dll), lalu:<br>
+Susun persamaan garis lurus<br>
+Interpretasikan gradien dan titik potong<br>
+Jawab dua pertanyaan berdasarkan grafik</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa informasi yang bisa kamu peroleh dari grafik garis lurus?</li>
+<li>Bagaimana grafik membantu memahami hubungan antara dua variabel?</li>
+<li>Apakah kamu bisa membuat grafik dari situasi nyata dan menjelaskannya?</li>
+<li>Siswa diminta membuat grafik dari situasi kehidupan mereka lalu menjelaskan arti grafik tersebut secara tertulis atau lisan.</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
